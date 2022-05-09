@@ -93,6 +93,8 @@ repositories:
   deprecated: true
 - uri: "https://github.com/FasterXML/jackson-dataformats-binary.git"
   uuid: "862be4e9-9750-4c67-b030-2b94d0bb2a2a"
+- uri: "https://github.com/FasterXML/jackson-dataformats-text"
+  uuid: "b40b9229-3f00-4a3f-a1fa-cf3953756dbd"
 - uri: "https://github.com/FasterXML/jackson-datatype-hibernate.git"
   uuid: "4bcac900-161c-40fa-997f-61069681d8c8"
 - uri: "https://github.com/FasterXML/jackson-datatype-joda.git"
@@ -1611,6 +1613,8 @@ repositories:
   uuid: "a8c4c53e-be6b-40b0-904a-48aef0aebccb"
 - uri: "https://github.com/square/wire.git"
   uuid: "7d7d4d20-2e69-43bc-be8c-5f3a76d73d1f"
+- uri: "https://github.com/square/wire.git"
+  uuid: "57fd7570-fa2e-4896-9fc7-217725bdff0e"
 - uri: "https://github.com/stleary/JSON-java"
   disabled: true
   failedReason: "Is a personal repo"

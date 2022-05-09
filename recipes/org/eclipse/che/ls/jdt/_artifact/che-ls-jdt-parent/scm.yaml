@@ -1,0 +1,4 @@
+---
+legacyRepos:
+- type: "git"
+  uri: "https://github.com/eclipse/che-ls-jdt/"
