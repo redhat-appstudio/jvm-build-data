@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/wildfly-security/wildfly-elytron.git"
+legacyRepos:
+- type: "git"
+  uri: "https://github.com/wildfly-security/wildfly-elytron-tool.git"

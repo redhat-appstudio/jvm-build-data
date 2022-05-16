@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/apache/santuario-xml-security-java.git"
+legacyRepos:
+- type: "git"
+  uri: "https://github.com/apache/santuario-java.git"

@@ -1068,6 +1068,7 @@ repositories:
   uuid: "9889ed08-6018-4acd-b579-9feaf2fc76a0"
 - uri: "https://github.com/jboss/jboss-jaxrs-api_spec.git"
   uuid: "75598b49-8cf5-4a0d-925f-c297d56a5dae"
+  deprecated: true
 - uri: "https://github.com/jboss/jboss-jaxws-api_spec.git"
   uuid: "55be70d1-df8d-4a09-97a5-568c7621f713"
 - uri: "https://github.com/jboss/jboss-jms-api_spec.git"

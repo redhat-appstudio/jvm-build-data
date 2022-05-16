@@ -1,3 +1,8 @@
 ---
 type: "git"
 uri: "https://github.com/smallrye/smallrye-mutiny-vertx-bindings.git"
+legacyRepos:
+- type: "git"
+  uri: "https://github.com/smallrye/smallrye-reactive-streams-operators.git"
+- type: "git"
+  uri: "https://github.com/smallrye/smallrye-reactive-utils"
