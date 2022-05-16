@@ -1,4 +1,0 @@
----
-type: "git"
-uri: "https://github.com/mysql/mysql-connector-j.git"
-path: "src/build/misc"
