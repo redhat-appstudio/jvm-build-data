@@ -1,4 +1,0 @@
----
-legacyRepos:
-- type: "git"
-  uri: "https://github.com/smallrye/smallrye-rest-client.git"

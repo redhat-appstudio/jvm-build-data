@@ -1595,6 +1595,7 @@ repositories:
   deprecated: true
 - uri: "https://github.com/smallrye/smallrye-reactive-utils"
   uuid: "a1341d60-2ac3-4712-a8f1-86bf0ac77af8"
+  deprecated: true
 - uri: "https://github.com/smallrye/smallrye-rest-client.git"
   uuid: "42333c2a-4442-4bfc-9068-e4d91d8ff8fc"
   deprecated: true
