@@ -69,6 +69,7 @@ repositories:
 - uri: "https://github.com/Apicurio/apicurio-common-rest-client.git"
   uuid: "3f889288-060a-411c-9966-4868b0e1070f"
 - uri: "https://github.com/Apicurio/apicurio-data-models"
+  disabled: true
   uuid: "a6c0be85-f828-433f-816b-bbf4b9267f1c"
 - uri: "https://github.com/Apicurio/apicurio-data-models.git"
   uuid: "966f376d-a901-4e03-919b-c6fb3daf5861"
@@ -326,6 +327,7 @@ repositories:
   uuid: "74c93a71-c41c-4dbe-aef0-ff826672fe0d"
 - uri: "https://github.com/cdi-spec/cdi.git"
   uuid: "cbdf7de2-42ee-4076-887d-42b8838d5e4f"
+  deprecated: true
 - uri: "https://github.com/census-instrumentation/opencensus-java"
   uuid: "985d1234-f93a-476a-8bde-fb530c44693b"
 - uri: "https://github.com/cincheo/jsweet"
@@ -375,8 +377,7 @@ repositories:
   uuid: "d6ecb1eb-a449-4d5a-973b-ee41b52319c5"
   deprecated: true
 - uri: "https://github.com/dmlloyd/jboss-logmanager-embedded.git"
-  disabled: true
-  failedReason: "Is a personal repo"
+  uuid: "f99125d3-9d92-4a73-b4e4-a9a7e6024b25"
 - uri: "https://github.com/dom4j/dom4j.git"
   uuid: "3c263a8b-a320-47ab-b415-99a4e38df8bf"
 - uri: "https://github.com/dropwizard/metrics.git"
@@ -384,6 +385,7 @@ repositories:
 - uri: "https://github.com/eclipse-ee4j/authentication.git"
   uuid: "1fc22e88-a545-4a25-b7e6-2b6d5f6efdd0"
 - uri: "https://github.com/eclipse-ee4j/beanvalidation-api.git"
+  disabled: true
   uuid: "9bb63916-3b50-4c05-b2aa-7bf6b8dc1421"
 - uri: "https://github.com/eclipse-ee4j/cdi.git"
   uuid: "64c80307-d77e-46c9-a3e9-ef56c993ea63"
@@ -975,8 +977,10 @@ repositories:
   uuid: "454a8210-a976-414e-961a-ff242c0d3252"
 - uri: "https://github.com/jboss/jboss-annotations-api_spec.git"
   uuid: "af847e17-3ac0-4ed8-978b-ba3eef9b7233"
+  deprecated: true
 - uri: "https://github.com/jboss/jboss-batch-api_spec.git"
   uuid: "18bf6335-0fce-460a-97c2-ef013665cd47"
+  deprecated: true
 - uri: "https://github.com/jboss/jboss-common-beans.git"
   uuid: "869a0166-0fd6-4143-aa66-cabcd5283210"
 - uri: "https://github.com/jboss/jboss-connector-api_spec.git"
@@ -987,6 +991,7 @@ repositories:
   uuid: "3b802146-3432-4ff0-8077-5b5b413ecfe9"
 - uri: "https://github.com/jboss/jboss-interceptors-api_spec.git"
   uuid: "5b9740b5-ffe2-4a38-84c9-ffbdcb8a00d3"
+  deprecated: true
 - uri: "https://github.com/jboss/jboss-j2eemgmt-api_spec.git"
   uuid: "aea26aa6-05b2-4819-8ea6-3047d622857b"
 - uri: "https://github.com/jboss/jboss-jakarta-annotations-api_spec.git"
@@ -1720,6 +1725,7 @@ repositories:
   uuid: "5f13ef1b-aa9d-44e6-9686-c5ce35fcd661"
 - uri: "https://github.com/wildfly-security/wildfly-elytron-tool.git"
   uuid: "35cfd9ba-30b6-4a67-801b-9a3079156361"
+  deprecated: true
 - uri: "https://github.com/wildfly-security/wildfly-elytron.git"
   uuid: "0d13e1aa-068d-438a-837a-3c0b2fe641d7"
 - uri: "https://github.com/wildfly/jandex.git"
