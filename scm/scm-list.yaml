@@ -1018,13 +1018,17 @@ repositories:
 - uri: "https://github.com/jboss/jboss-jakarta-jacc-api_spec.git"
   uuid: "55249749-868a-4ff9-910e-d53a043c4338"
 - uri: "https://github.com/jboss/jboss-jakarta-jaspi-api_spec.git"
+  disabled: true
+  failedReason: "Not in use yet"
   uuid: "6d6635b7-1ed7-4be9-a195-e23dcf2c5ed2"
 - uri: "https://github.com/jboss/jboss-jakarta-jax-rpc-api.git"
   disabled: true
-  failedReason: "Is a fork"
+  failedReason: "Not in use yet"
 - uri: "https://github.com/jboss/jboss-jakarta-jax-ws-api_spec.git"
   uuid: "1d63c223-c8dd-4a8c-a904-c15998eb9270"
 - uri: "https://github.com/jboss/jboss-jakarta-jaxb-api_spec.git"
+  disabled: true
+  failedReason: "Not in use yet"
   uuid: "13a02206-31bb-41a0-b5a5-72308d6db394"
 - uri: "https://github.com/jboss/jboss-jakarta-jaxrs-api_spec.git"
   uuid: "31e9b668-18fe-48f0-aa5f-3307604cb210"
@@ -1032,6 +1036,8 @@ repositories:
   disabled: true
   failedReason: "Is a fork"
 - uri: "https://github.com/jboss/jboss-jakarta-jsp-api_spec.git"
+  disabled: true
+  failedReason: "Not in use yet"
   uuid: "3067284f-cb65-4253-a900-9c5c1e8a825a"
 - uri: "https://github.com/jboss/jboss-jakarta-jta-api.git"
   disabled: true
@@ -1042,6 +1048,8 @@ repositories:
 - uri: "https://github.com/jboss/jboss-jakarta-saaj-api_spec.git"
   uuid: "333a6adf-ff12-490b-b67b-a64c296de650"
 - uri: "https://github.com/jboss/jboss-jakarta-servlet-api_spec.git"
+  disabled: true
+  failedReason: "Not in use yet"
   uuid: "4c60713a-0d6a-4448-85fa-80ed2dc7b4f3"
 - uri: "https://github.com/jboss/jboss-jakarta-websocket-api.git"
   disabled: true
@@ -1115,6 +1123,7 @@ repositories:
   uuid: "f2cc9bf3-6860-49b0-82e0-ab24cba44179"
 - uri: "https://github.com/jbossas/jboss-modules.git"
   uuid: "42812bb9-df00-49be-8c29-8b3584261d2a"
+  deprecated: true
 - uri: "https://github.com/jbossas/jboss-msc.git"
   uuid: "eaca9636-ccfa-45cb-a3d8-30c2e7821fd4"
 - uri: "https://github.com/jbossas/jboss-threads.git"

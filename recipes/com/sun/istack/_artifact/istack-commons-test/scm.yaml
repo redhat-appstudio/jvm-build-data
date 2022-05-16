@@ -1,0 +1,4 @@
+---
+type: "git"
+uri: "https://github.com/eclipse-ee4j/jaxb-istack-commons.git"
+path: "istack-commons"
