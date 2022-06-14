@@ -564,9 +564,9 @@ repositories:
   processed: true
   uuid: "5fb7898c-f5da-462d-a867-b17ecbd2da3c"
 - uri: "https://github.com/eclipse-ee4j/jaf.git"
-  paths:
-    - "api"
   uuid: "969bb74a-984b-4c15-bed3-86f63764e66a"
+  paths:
+  - "api"
 - uri: "https://github.com/eclipse-ee4j/jax-ws-api.git"
   processed: true
   uuid: "8eec54ee-d2a3-4230-9f11-b07121a715be"
@@ -2365,4 +2365,3 @@ repositories:
   failed: true
   failedReason: "CLONE_FAILURE"
   uuid: "8c3a0a50-d839-4d90-b9af-8a3c035bea04"
-- uri:
