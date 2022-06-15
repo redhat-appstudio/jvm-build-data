@@ -494,6 +494,9 @@ repositories:
 - uri: "https://github.com/ctron/hono.git"
   disabled: true
   failedReason: "Is a fork"
+- uri: "https://github.com/damnhandy/Handy-URI-Templates.git"
+  processed: true
+  uuid: "cf84f093-c0f2-40dc-8dfa-50f21979c20d"
 - uri: "https://github.com/datastax/cassandra-quarkus.git"
   processed: true
   uuid: "e9ffe933-397e-46ff-b759-041a08991efd"
@@ -816,6 +819,8 @@ repositories:
 - uri: "https://github.com/gaohoward/TestMavenProject.git"
   disabled: true
   failedReason: "Is a personal repo"
+- uri: "https://github.com/getsentry/sentry-java.git"
+  uuid: "672b66f7-2b88-4188-8c1d-17cf6c4e5da3"
 - uri: "https://github.com/google/dagger"
   disabled: true
   failedReason: "Is a fork"
