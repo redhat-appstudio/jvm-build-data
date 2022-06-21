@@ -4,7 +4,7 @@ uri: "https://github.com/apache/commons-logging.git"
 tagMapping:
   - pattern: 1.1.1
     tag: commons-logging-1.1.1
-  - pattern: (\d).(\d)
+  - pattern: (\d+)\.(\d+)
     tag: LOGGING_$1_$2
-  - pattern: (\d).(\d).(\d)
+  - pattern: (\d+)\.(\d+)\.(\d+)
     tag: LOGGING_$1_$2_$3
