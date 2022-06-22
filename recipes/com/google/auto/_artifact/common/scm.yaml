@@ -1,0 +1,4 @@
+---
+type: "git"
+uri: "https://github.com/google/auto.git"
+path: "common"

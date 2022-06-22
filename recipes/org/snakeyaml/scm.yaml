@@ -1,3 +1,8 @@
 ---
 type: "git"
 uri: "https://bitbucket.org/snakeyaml/snakeyaml-engine.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+)
+    tag: snakeyaml-engine-$1.$2
+  - pattern: (\d+)\.(\d+)\.(\d+)
+    tag: snakeyaml-engine-$1.$2.$3
