@@ -1,0 +1,7 @@
+---
+type: "git"
+uri: "https://github.com/google/guava"
+path: "futures/failureaccess"
+tagMapping:
+  - pattern: 1.0.1
+    tag: failureaccess-v1.0.1

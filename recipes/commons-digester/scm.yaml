@@ -1,3 +1,14 @@
 ---
 type: "git"
 uri: "https://github.com/apache/commons-digester.git"
+tagMapping:
+  - pattern: 3.0
+    tag: commons-digester3-3.0
+  - pattern: (\d+)\.(\d+)
+    tag: DIGESTER3_$1_$2
+  - pattern: (\d+)\.(\d+)
+    tag: DIGESTER_$1_$2
+  - pattern: (\d+)\.(\d+)\.(\d+)
+    tag: DIGESTER3_$1_$2_$3
+  - pattern: (\d+)\.(\d+)\.(\d+)
+    tag: DIGESTER_$1_$2_$3
