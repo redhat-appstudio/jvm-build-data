@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/JetBrains/java-annotations.git"
+tagMapping:
+  - pattern: 13.0
+    tag: 66ad5770333cc41b284464003e7fd3278dee6b66
