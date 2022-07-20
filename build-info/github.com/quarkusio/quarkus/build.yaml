@@ -1,6 +1,7 @@
 ---
 additionalArgs:
   - "-DskipDocs=true"
+  - "-Dno-test-modules"
 ignoredArtifacts:
   - "quarkus-cli"
   - "quarkus-maven-plugin"
