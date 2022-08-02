@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/stuartwdouglas/hacbs-test-simple-jdk8.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+).(\d+)
+    tag: $1_$2_$3_RELEASE
