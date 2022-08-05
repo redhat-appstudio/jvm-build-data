@@ -1,3 +1,6 @@
 ---
 type: "git"
-uri: "https://github.com/eclipse-ee4j/el-ri.git"
+uri: "https://github.com/jakartaee/expression-language.git"
+tagMapping:
+  - pattern: 3.0.3
+    tag: 3.0.3-RELEASE-COMBO
