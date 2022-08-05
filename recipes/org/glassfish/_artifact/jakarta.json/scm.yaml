@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/eclipse-ee4j/jsonp"
+tagMapping:
+  - pattern: 1.1.6
+    tag: 1.1-1.1.6
