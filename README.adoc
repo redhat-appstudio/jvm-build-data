@@ -1,0 +1,4 @@
+== JVM Build Recipe Repository
+
+This repository contains information used to rebuild Java dependencies,
+including SCM information and other build related info.
