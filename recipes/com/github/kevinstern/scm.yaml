@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/KevinStern/software-and-algorithms.git"
+tagMapping:
+  - pattern: 1.0
+    tag: d428bbb
