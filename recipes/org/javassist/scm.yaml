@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/jboss-javassist/javassist.git"
 tagMapping:
-  - pattern: (\d+)\.(\d+).(\d+)-GA
+  - pattern: (\d+)\.(\d+)\.(\d+)-GA
     tag: rel_$1_$2_$3_ga
