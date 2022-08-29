@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/apache/httpcomponents-client.git"
 tagMapping:
-  - pattern: 4.5.13
-    tag: rel/v4.5.13
+  - pattern: .*
+    tag: rel/v$0
