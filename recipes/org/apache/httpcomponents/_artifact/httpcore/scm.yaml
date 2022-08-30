@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/apache/httpcomponents-core.git"
+tagMapping:
+  - pattern: 4.4.15
+    tag: rel/v4.4.15
