@@ -1,4 +1,4 @@
 ---
 type: "git"
 uri: "https://github.com/eclipse-ee4j/jsonp"
-
+path: "api"
