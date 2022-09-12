@@ -1,0 +1,3 @@
+---
+ignoredArtifacts:
+  - "antlr4" #we mostly just care about runtime for now
