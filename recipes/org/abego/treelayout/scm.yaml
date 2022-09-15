@@ -1,3 +1,4 @@
 ---
 type: "git"
 uri: "https://github.com/abego/treelayout.git"
+path: "org.abego.treelayout"
