@@ -1,0 +1,7 @@
+---
+type: "git"
+uri: "https://github.com/antlr/stringtemplate3"
+enforceVersion: true
+tagMapping:
+  - pattern: 3\.2\.1
+    tag: aa6bd8f2194bf8ed141b4f243d7d7033281c2b91
