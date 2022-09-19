@@ -1,8 +1,0 @@
----
-additionalArgs:
-  - "-DskipDocs=true"
-ignoredArtifacts:
-  - "quarkus-cli"
-  - "quarkus-maven-plugin"
-  - "quarkus-grpc-protoc-plugin"
-  - "quarkus-bootstrap-gradle-resolver"
