@@ -1,0 +1,3 @@
+---
+preBuildScript: rm -r wire-grpc-sample wire-android-java-sample
+enforceVersion: true
