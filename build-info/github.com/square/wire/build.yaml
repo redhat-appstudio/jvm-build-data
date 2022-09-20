@@ -1,3 +1,4 @@
 ---
-preBuildScript: rm -r wire-grpc-sample wire-android-java-sample && sed -i 's/allprojects\s*{/allprojects {\n  version="$(params.ENFORCE_VERSION)"/' build.gradle
-enforceVersion: true
+additionalArgs:
+  - "-p"
+  - "wire-library"
