@@ -1,0 +1,6 @@
+---
+additionalArgs:
+  - "-x"
+  - ":jackson-coreutils-equivalence:build"
+  - "-x"
+  - ":jackson-coreutils-equivalence:uploadArchives"
