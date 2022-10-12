@@ -1,0 +1,4 @@
+---
+type: "git"
+uri: "https://github.com/vert-x3/prez-demos.git"
+path: "fatjar"
