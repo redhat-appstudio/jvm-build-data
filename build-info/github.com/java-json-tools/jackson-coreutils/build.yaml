@@ -4,3 +4,5 @@ additionalArgs:
   - ":jackson-coreutils-equivalence:build"
   - "-x"
   - ":jackson-coreutils-equivalence:uploadArchives"
+  - "-x"
+  - "checkSigningRequirements"
