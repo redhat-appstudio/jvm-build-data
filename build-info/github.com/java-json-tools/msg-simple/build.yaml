@@ -1,0 +1,4 @@
+---
+additionalArgs:
+  - "-x"
+  - "checkSigningRequirements"
