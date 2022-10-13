@@ -1,6 +1,0 @@
----
-type: "git"
-uri: "https://github.com/FasterXML/jackson-dataformats-text"
-legacyRepos:
-- type: "git"
-  uri: "https://github.com/FasterXML/jackson-dataformat-yaml.git"
