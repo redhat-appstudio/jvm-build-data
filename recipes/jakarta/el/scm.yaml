@@ -1,6 +1,7 @@
 ---
 type: "git"
 uri: "https://github.com/jakartaee/expression-language.git"
+path: "api"
 tagMapping:
   - pattern: 3.0.3
     tag: 3.0.3-RELEASE-COMBO
