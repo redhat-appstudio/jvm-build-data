@@ -2,3 +2,6 @@
 type: "git"
 uri: "https://github.com/google/j2objc.git"
 path: "annotations"
+tagMapping:
+  - pattern: "1.3"
+    tag: "1.3.1"
