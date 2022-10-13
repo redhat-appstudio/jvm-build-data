@@ -1,0 +1,4 @@
+---
+additionalArgs:
+  - "-Dkjs=false"
+  - "-Dknative=false"

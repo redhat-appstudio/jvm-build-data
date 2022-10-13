@@ -2,3 +2,6 @@
 additionalArgs:
   - "-p"
   - "wire-library"
+  - "-Dkjs=false"
+  - "-Dknative=false"
+  - "-Pswift=false"
