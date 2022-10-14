@@ -2,4 +2,4 @@
 enforceVersion: true
 additionalArgs:
   - "-Prelease.stage=final"
-  - "-Prelease.version=$(params.ENFORCE_VERSION)"
+  - "-Prelease.version=${ENFORCE_VERSION}"
