@@ -1,5 +1,0 @@
----
-enforceVersion: true
-additionalArgs:
-  - "-Prelease.stage=final"
-  - "-Prelease.version=${ENFORCE_VERSION}"
