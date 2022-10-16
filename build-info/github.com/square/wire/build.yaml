@@ -6,3 +6,5 @@ additionalArgs:
   - "-Dkjs=false"
   - "-Dknative=false"
   - "-Pswift=false"
+  - "-x"
+  - "signArchives"
