@@ -1,0 +1,3 @@
+---
+additionalArgs:
+  - "-Pkotlin.build.isObsoleteJdkOverrideEnabled=true"
