@@ -1,0 +1,4 @@
+---
+type: "git"
+uri: "https://github.com/apache/flink-playgrounds.git"
+path: "table-walkthrough"

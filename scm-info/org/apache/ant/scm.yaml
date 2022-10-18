@@ -1,0 +1,4 @@
+---
+type: "git"
+uri: "https://github.com/apache/ant.git"
+path: "src/etc/poms"

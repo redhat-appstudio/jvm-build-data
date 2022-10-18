@@ -1,0 +1,4 @@
+---
+type: "git"
+uri: "https://github.com/apache/rocketmq-clients.git"
+path: "java"

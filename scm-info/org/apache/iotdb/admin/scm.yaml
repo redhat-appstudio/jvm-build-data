@@ -1,0 +1,4 @@
+---
+type: "git"
+uri: "https://github.com/apache/iotdb-web-workbench.git"
+path: "backend"

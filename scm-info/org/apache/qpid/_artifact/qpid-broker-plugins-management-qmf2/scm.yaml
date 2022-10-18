@@ -1,0 +1,4 @@
+---
+type: "git"
+uri: "https://github.com/apache/qpid.git"
+path: "qpid/tools/src/java"
