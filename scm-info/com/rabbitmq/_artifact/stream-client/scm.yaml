@@ -1,0 +1,3 @@
+---
+type: "git"
+uri: "https://github.com/rabbitmq/rabbitmq-stream-java-client.git"

@@ -1,0 +1,4 @@
+---
+type: "git"
+uri: "https://github.com/rabbitmq/ra-kv-store.git"
+path: "jepsen/jepsen.rakvstore"

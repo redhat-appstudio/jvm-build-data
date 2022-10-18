@@ -1,0 +1,4 @@
+---
+type: "git"
+uri: "https://github.com/rabbitmq/rabbitmq-oauth2-tutorial.git"
+path: "jms-client"

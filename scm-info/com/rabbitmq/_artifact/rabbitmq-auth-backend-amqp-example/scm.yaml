@@ -1,0 +1,4 @@
+---
+type: "git"
+uri: "https://github.com/rabbitmq/rabbitmq-auth-backend-amqp.git"
+path: "examples/rabbitmq-auth-backend-java"
