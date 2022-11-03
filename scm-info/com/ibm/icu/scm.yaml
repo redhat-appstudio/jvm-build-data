@@ -3,4 +3,4 @@ type: "git"
 uri: "https://github.com/unicode-org/icu.git"
 tagMapping:
   - pattern: (\d+)\.(\d+)
-  - tag: release-$1-$2
+    tag: release-$1-$2
