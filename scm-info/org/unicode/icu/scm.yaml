@@ -1,4 +1,0 @@
----
-type: "git"
-uri: "https://github.com/unicode-org/icu.git"
-path: "tools/release/java"
