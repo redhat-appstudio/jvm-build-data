@@ -1,0 +1,4 @@
+---
+type: "git"
+uri: "https://github.com/hornetq/application-server-MDB-loader.git"
+path: "messaging-test"
