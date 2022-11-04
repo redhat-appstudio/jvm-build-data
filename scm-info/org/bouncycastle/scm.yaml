@@ -1,3 +1,7 @@
 ---
 type: "git"
 uri: "https://github.com/bcgit/bc-java"
+tagMapping:
+    - pattern: (\d+)\.(\d+)
+      tag: r$1rv$2
+
