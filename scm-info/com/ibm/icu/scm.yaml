@@ -1,6 +1,7 @@
 ---
 type: "git"
 uri: "https://github.com/unicode-org/icu.git"
+path: "icu4j"
 tagMapping:
   - pattern: (\d+)\.(\d+)
     tag: release-$1-$2
