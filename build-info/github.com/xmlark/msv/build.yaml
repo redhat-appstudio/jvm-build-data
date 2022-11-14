@@ -1,2 +1,5 @@
 ---
 enforceVersion: true
+preBuildScript: |
+    sed -i -e 's/com\.sun\.org\.apache\.xml\.internal\.resolver\.tools/org.apache.xml.resolver.tools/' msv/src/main/java/com/sun/msv/driver/textui/Driver.java
+    sed -i -e 's/1\.4\.3/2.5.4/' pom.xml
