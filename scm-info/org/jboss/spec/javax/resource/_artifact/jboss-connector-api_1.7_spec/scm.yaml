@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/jboss/jboss-connector-api_spec.git"
+tagMapping:
+  - pattern: .*
+    tag: jboss-connector-api_1.7_spec-$0
