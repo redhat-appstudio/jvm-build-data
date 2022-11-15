@@ -1,6 +1,7 @@
----
+--
 type: "git"
 uri: "https://github.com/jboss/jboss-jakarta-jaxrs-api_spec.git"
+path: "jaxrs-api"
 tagMapping:
   - pattern: .*
     tag: jboss-jaxrs-api_2.1_spec-$0
