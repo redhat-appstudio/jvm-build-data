@@ -1,11 +1,8 @@
 ---
-type: "git"
-uri: "https://github.com/apache/httpasyncclient.git"
-legacyRepos:
-  - type: "git"
-    #TODO: these are actually the wrong way around, but we need to check the actual legacy repo first
-    #We need to think about how to handle this situation
-    uri: "https://github.com/apache/httpcomponents-client.git"
-    tagMapping:
-      - pattern: .*
-        tag: rel/v$0
+- type: "git"
+  #TODO: these are actually the wrong way around, but we need to check the actual legacy repo first
+  #We need to think about how to handle this situation
+  uri: "https://github.com/apache/httpcomponents-client.git"
+  tagMapping:
+    - pattern: .*
+      tag: rel/v$0
