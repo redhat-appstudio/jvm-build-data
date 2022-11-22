@@ -1,0 +1,6 @@
+---
+additionalDownloads:
+  - uri: https://github.com/mikefarah/yq/releases/download/v4.30.4/yq_linux_amd64
+    sha256: 30459aa144a26125a1b22c62760f9b3872123233a5658934f7bd9fe714d7864d
+    type: executable
+    fileName: yq
