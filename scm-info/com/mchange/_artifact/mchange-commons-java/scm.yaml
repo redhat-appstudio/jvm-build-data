@@ -1,0 +1,9 @@
+---
+type: "git"
+uri: "https://github.com/jvm-build-service-code/swaldman-mchange-commons-java.git"
+tagMapping:
+  - pattern: .*
+    tag: rebuilt-($0)
+legacyRepos:
+  - type: "git"
+    uri: "https://github.com/swaldman/mchange-commons-java.git"
