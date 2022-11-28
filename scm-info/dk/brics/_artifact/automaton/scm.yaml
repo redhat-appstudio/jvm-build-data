@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/cs-au-dk/dk.brics.automaton"
+legacyRepos:
+  - type: "git"
+    uri: "https://github.com/jvm-build-service-code/cs-au-dk-dk.brics.automaton"
