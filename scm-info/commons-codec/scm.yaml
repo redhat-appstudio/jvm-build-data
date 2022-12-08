@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/apache/commons-codec.git"
+tagMapping:
+  - pattern: 1.6
+    tag: 1_6
