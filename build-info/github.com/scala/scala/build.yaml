@@ -1,0 +1,6 @@
+---
+alternativeArgs:
+  - "'set Global / baseVersionSuffix:=\"\"'"
+  - "enableOptimizer"
+  - "dist/mkPack"
+  - "publish"
