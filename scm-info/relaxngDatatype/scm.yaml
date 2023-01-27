@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/java-schema-utilities/relaxng-datatype-java.git"
+tagMapping:
+  - pattern: 20020414
+    tag: a83e0896eddbd57a6c8c7afe9cae907199d5108b
