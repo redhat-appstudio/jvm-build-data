@@ -1,4 +1,4 @@
 ---
 enforceVersion: true
 additionalArgs:
-  - "-Dnative.deploy=disabled"
+  - "-Pnative.deploy=disabled"
