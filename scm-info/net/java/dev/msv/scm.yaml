@@ -1,6 +1,7 @@
 ---
 type: "git"
 uri: "https://github.com/xmlark/msv.git"
+enforceVersion: true
 tagMapping:
   - pattern: 2013.6.1
     tag: 83df89e6ad3be5fd1ffeb31a5b556b48c3f518c5
