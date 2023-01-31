@@ -1,4 +1,5 @@
 ---
+additionalMemory: 512
 preBuildScript: |
     sed -i -e '/^afterEvaluate {$/,/^}$/d' libraries/stdlib/wasm/build.gradle.kts
 additionalArgs:
