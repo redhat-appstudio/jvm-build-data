@@ -30,3 +30,4 @@ additionalArgs:
   - "kotlin-test-js-runner:yarnBuild"
   - "-x"
   - "kotlin-test-js-runner:yarnSetup"
+  - "-DdokkaPlugin=false"
