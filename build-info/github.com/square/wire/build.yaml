@@ -1,9 +1,11 @@
 ---
 enforceVersion: true
-preBuildScript: "sed -i \"s/'mavenPublish': '0.8.0'/'mavenPublish': '0.9.0'/\" wire-library/dependencies.gradle"
+preBuildScript: "sed -i -e \"s/'mavenPublish': '0.8.0'/'mavenPublish': '0.10.0'/\" wire-library/dependencies.gradle"
 additionalArgs:
   - "-p"
   - "wire-library"
   - "-Dkjs=false"
   - "-Dknative=false"
   - "-Pswift=false"
+  - "-PRELEASE_SIGNING_ENABLED=false"
+  - "uploadArchives"
