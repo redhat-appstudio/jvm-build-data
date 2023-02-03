@@ -1,0 +1,3 @@
+---
+preBuildScript: |
+    rm build.gradle build.sbt
