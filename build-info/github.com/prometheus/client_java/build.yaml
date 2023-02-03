@@ -1,0 +1,5 @@
+---
+#temporary measure until we can control which builds use which cache repos
+additionalArgs:
+  - "-pl"
+  - "!io.prometheus:it_exemplars_otel_agent"
