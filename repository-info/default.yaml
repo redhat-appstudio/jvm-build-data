@@ -1,0 +1,6 @@
+repositories:
+  - "central"
+  - "jboss"
+  - "redhat"
+  - "gradle"
+  - "gradle-plugins"
