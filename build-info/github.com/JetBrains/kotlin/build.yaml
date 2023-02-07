@@ -3,6 +3,9 @@ additionalMemory: 512
 javaVersion: "11"
 preBuildScript: |
     sed -i -e '/^afterEvaluate {$/,/^}$/d' libraries/stdlib/wasm/build.gradle.kts
+repositories:
+  - "all"
+  - "intellij-releases"
 additionalArgs:
   - "-Pkotlin.build.isObsoleteJdkOverrideEnabled=true"
   - "-x"
