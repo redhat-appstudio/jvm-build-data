@@ -1,6 +1,7 @@
 ---
 repositories:
   - "default"
+  - "spring-plugins"
 additionalArgs:
   - "-x"
   - "checkSigningRequirements"
