@@ -4,3 +4,5 @@ additionalArgs:
   - "-Pnative.deploy=disabled"
   - "-x"
   - ":kotlinx-serialization-cbor:dokkaHtml"
+  - "-x"
+  - ":kotlinx-serialization-core:dokkaHtml"
