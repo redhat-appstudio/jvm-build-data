@@ -1,0 +1,2 @@
+---
+preBuildScript: "sed -i -e \"s/'mavenPublish': '0.8.0'/'mavenPublish': '0.10.0'/\" wire-library/dependencies.gradle"
