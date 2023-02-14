@@ -1,4 +1,5 @@
 repositories:
+  - "central"
   - "jboss"
   - "gradle-plugins"
   - "confluent"
