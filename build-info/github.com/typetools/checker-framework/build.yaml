@@ -1,0 +1,12 @@
+---
+alternativeArgs:
+  - "checker-qual:build"
+  - "checker-qual:publish"
+  - "-x"
+  - "framework:compileJava"
+  - "-x"
+  - "checker:compileJava"
+  - "-x"
+  - "checker-qual:javadoc"
+  - "-x"
+  - "checker-qual:signCheckerQualPublication"
