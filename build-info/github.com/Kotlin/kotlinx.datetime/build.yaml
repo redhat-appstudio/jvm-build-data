@@ -1,0 +1,4 @@
+---
+repositories:
+  - "all"
+  - "jetbrains-kotlinx"
