@@ -1,0 +1,4 @@
+---
+enforceVersion: true
+additionalArgs:
+  - "-Pdisable_native_targets=true"
