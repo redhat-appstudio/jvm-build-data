@@ -7,5 +7,4 @@ additionalArgs:
   - "-Dkjs=false"
   - "-Dknative=false"
   - "-Pswift=false"
-  - "-PRELEASE_SIGNING_ENABLED=false"
   - "uploadArchives"
