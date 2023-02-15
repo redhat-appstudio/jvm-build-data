@@ -1,3 +1,6 @@
 ---
 preBuildScript: |
     sed -i -e 's|2\.7\.8|2.5.3|g;' -e 's|-SNAPSHOT|.0|g;' ivy.xml ivy-pure-java.xml
+postBuildScript: |
+    VERSION=$(sed -n -e 's|<info organisation="org.lz4" module="lz4-java" revision="\(.*\)" />|\1|p' ivy.xml)
+    mvn -B -e -s "$(workspaces.build-settings.path)/settings.xml" org.apache.maven.plugins:maven-deploy-plugin:3.1.0:deploy-file "-Durl=file:$(workspaces.source.path)/artifacts" -DpomFile=dist/lz4-java-${VERSION}.pom -Dfile=dist/lz4-java-${VERSION}.jar -Dfiles=dist/lz4-java-${VERSION}-sources.jar,dist/lz4-java-${VERSION}-javadoc.jar -Dclassifiers=sources,javadoc -Dtypes=jar,jar
