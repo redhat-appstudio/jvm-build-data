@@ -16,4 +16,4 @@ repositories:
   - "kotlinnative14linux"
   - "jcs"
   - "kotlin-bootstrap"
-  - "kotlin-kotlin-dependencies"
+  - "kotlin-dependencies"
