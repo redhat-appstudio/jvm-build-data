@@ -2,6 +2,7 @@
 enforceVersion: true
 additionalArgs:
   - "-Pnative.deploy=disabled"
+  - "-js.deploy=disabled"
   - "-x"
   - ":kotlinx-serialization-cbor:dokkaHtml"
   - "-x"
