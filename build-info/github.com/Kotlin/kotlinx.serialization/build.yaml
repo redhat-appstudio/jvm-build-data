@@ -16,3 +16,5 @@ additionalArgs:
   - ":kotlinx-serialization-protobuf:dokkaHtml"
   - "-x"
   - ":dokkaHtmlMultiModule"
+  - "-x"
+  - ":knitCheck"
