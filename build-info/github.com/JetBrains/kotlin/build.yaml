@@ -12,6 +12,7 @@ preBuildScript: |
 repositories:
   - "all"
   - "intellij-releases"
+  - "intellij-dependencies"
 additionalArgs:
   - "-Pkotlin.build.isObsoleteJdkOverrideEnabled=true"
   - "-x"
