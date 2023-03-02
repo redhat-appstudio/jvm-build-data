@@ -3,6 +3,12 @@ additionalMemory: 1024
 javaVersion: "11"
 preBuildScript: |
     sed -i -e '/^afterEvaluate {$/,/^}$/d' libraries/stdlib/wasm/build.gradle.kts
+    export ALLOW_IVY_REPO=true
+    microdnf install java-1.8.0-openjdk-devel
+    export JDK_16=/lib/jvm/java-1.8.0
+    export JDK_17=/lib/jvm/java-1.8.0
+    export JDK_18=/lib/jvm/java-1.8.0
+    export JDK_9=/lib/jvm/java-11
 repositories:
   - "all"
   - "intellij-releases"
