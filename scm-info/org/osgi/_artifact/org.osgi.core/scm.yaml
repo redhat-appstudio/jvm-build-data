@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/osgi/osgi.git"
+tagMapping:
+- pattern: "5.0.0"
+  tag: "r5-core-spec-final"
