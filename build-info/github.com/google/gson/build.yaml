@@ -1,0 +1,4 @@
+---
+javaVersion: "11"
+preBuildScript: |
+    dnf install java-11-openjdk-jmods
