@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "test"
+tagMapping:
+- pattern: "$1\\.$2"
+  tag: "v$1.$2"
