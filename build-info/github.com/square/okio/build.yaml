@@ -2,3 +2,6 @@
 additionalArgs:
   - "-Dkjs=false"
   - "-Dknative=false"
+additionalDownloads:
+  - type: rpm
+    packageName: zip
