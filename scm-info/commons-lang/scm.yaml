@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/apache/commons-lang.git"
+tagMapping:
+- pattern: "LANG_(\\d+)_(\\d+)"
+  tag: "$1.$2"
