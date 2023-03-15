@@ -2,6 +2,7 @@
 additionalArgs:
   - "-Dkjs=false"
   - "-Dknative=false"
+  - "-x:okio:jvmTest"
 additionalDownloads:
   - type: rpm
     packageName: zip
