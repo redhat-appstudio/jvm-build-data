@@ -1,4 +1,6 @@
 ---
+preBuildScript: |
+  export ALLOW_IVY_REPO=true
 repositories:
   - "all"
   - "jetbrains-kotlinx"

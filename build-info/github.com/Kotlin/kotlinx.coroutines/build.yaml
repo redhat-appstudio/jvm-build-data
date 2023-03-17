@@ -1,4 +1,6 @@
 ---
+preBuildScript: |
+  export ALLOW_IVY_REPO=true
 enforceVersion: true
 additionalArgs:
   - "-Pdisable_native_targets=true"
