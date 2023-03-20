@@ -1,0 +1,7 @@
+---
+type: "git"
+uri: "https://github.com/jakartaee/persistence.git"
+path: "api"
+tagMapping:
+  - pattern: (\d+)\.(\d+).(\d+)
+    tag: $1.$2-$1.$2.$3-RELEASE
