@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/microsoft/mssql-jdbc"
+tagMapping:
+  - pattern: (\d+)\.(\d+).(\d+).jre11
+    tag: v$1.$2.$3

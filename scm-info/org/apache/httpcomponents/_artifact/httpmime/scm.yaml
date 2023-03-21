@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/apache/httpcomponents-client.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+).(\d+)
+    tag: rel/v$1.$2.$3

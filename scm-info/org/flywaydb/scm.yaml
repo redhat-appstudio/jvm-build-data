@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/flyway/flyway.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+).(\d+)
+    tag: flyway-(\d+)\.(\d+).(\d+)

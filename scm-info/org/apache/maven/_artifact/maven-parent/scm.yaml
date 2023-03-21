@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/apache/maven-parent.git"
+tagMapping:
+  - pattern: (\d+)
+    tag: maven-parent-$1

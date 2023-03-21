@@ -1,6 +1,6 @@
 ---
 type: "git"
-uri: "https://github.com/jakartaee/authentication.git"
+uri: "https://github.com/eclipse-ee4j/expressly.git"
 tagMapping:
   - pattern: (\d+)\.(\d+).(\d+)
     tag: $1.$2.$3-RELEASE

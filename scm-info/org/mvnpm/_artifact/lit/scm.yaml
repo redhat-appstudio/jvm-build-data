@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/lit/lit.git"
+tagMapping:
+  - pattern: 2.6.1
+    tag: lit@2.6.1

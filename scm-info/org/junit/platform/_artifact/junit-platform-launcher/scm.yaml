@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/junit-team/junit5.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+).(\d+)
+    tag: r5.$2.$3
