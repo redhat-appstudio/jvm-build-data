@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/gitaarik/lit-state.git"
+tagMapping:
+  - pattern: "1.7.0"
+    tag: "f78b66564de6572c27061c189cd4faa200c2efe5"

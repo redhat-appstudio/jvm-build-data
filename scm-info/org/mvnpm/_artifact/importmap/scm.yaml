@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/mvnpm/importmap.git"
+tagMapping:
+  - pattern: "1.0.6"
+    tag: "fd33745896d222f24c58385a4f59fd732b4ccfe3"

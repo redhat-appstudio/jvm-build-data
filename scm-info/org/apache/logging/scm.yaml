@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/apache/logging-parent.git"
+tagMapping:
+  - pattern: (\d+)
+    tag: rel/$1

@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/apache/groovy.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+)\.(\d+)
+    tag: GROOVY_$1_$2_$3

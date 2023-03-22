@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/sonatype/oss-parents.git"
+tagMapping:
+  - pattern: (\d+)
+    tag: oss-parent-$1

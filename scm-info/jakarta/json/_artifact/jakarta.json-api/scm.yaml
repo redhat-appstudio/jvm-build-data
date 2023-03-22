@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/jakartaee/jsonp-api.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+).(\d+)
+    tag: $1.$2.$3-RELEASE

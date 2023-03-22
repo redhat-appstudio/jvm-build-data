@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/aeshell/aesh.git"
+tagMapping:
+  - pattern: 2.7
+    tag: ef71ccb98131888f2c6a8b02f32e7c762f9e98ac

@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/quarkusio/quarkus-spring-api.git"
+tagMapping:
+  - pattern: 5.2.SP7
+    tag: 5.2.7.SP7

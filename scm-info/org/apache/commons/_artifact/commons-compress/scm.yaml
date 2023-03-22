@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/apache/commons-compress.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+)
+    tag: rel/$1.$2

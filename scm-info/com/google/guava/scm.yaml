@@ -4,3 +4,5 @@ uri: "https://github.com/google/guava"
 tagMapping:
   - pattern: (.*)-jre
     tag: v$1
+  - pattern: (.*)-android
+    tag: v$1

@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/aws/aws-lambda-java-libs.git"
+tagMapping:
+  - pattern: 1.2.2
+    tag: 8696626f850eef748efe6f41400bb127a0543a7c
