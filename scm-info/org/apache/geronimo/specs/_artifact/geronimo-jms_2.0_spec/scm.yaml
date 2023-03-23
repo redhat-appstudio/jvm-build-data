@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/apache/geronimo-specs.git"
+tagMapping:
+  - pattern: (.*)
+    tag: geronimo-jms_2.0_spec-1.0-alpha-2

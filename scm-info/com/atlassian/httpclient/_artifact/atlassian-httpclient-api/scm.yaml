@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://code.engineering.redhat.com/gerrit/atlassian/atlassian-httpclient.git"
+tagMapping:
+  - pattern: (.*)
+    tag: atlassian-httpclient-$1

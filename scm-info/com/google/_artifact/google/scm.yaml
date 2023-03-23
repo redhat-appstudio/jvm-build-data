@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/google/google-maven-parents.git"
+tagMapping:
+  - pattern: (.*)
+    tag: google-$1

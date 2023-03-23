@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://code.engineering.redhat.com/gerrit/atlassian/atlassian-event.git"
+tagMapping:
+  - pattern: (.*)
+    tag: atlassian-event-$1

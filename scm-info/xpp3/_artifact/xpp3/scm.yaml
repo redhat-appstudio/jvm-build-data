@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/codelibs/xpp3.git"
+tagMapping:
+  - pattern: (.*)
+    tag: xpp3-$1.0

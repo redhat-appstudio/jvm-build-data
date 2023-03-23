@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/Azure/azure-sdk-for-java.git"
+tagMapping:
+  - pattern: (.*)
+    tag: azure-storage-blob_$1

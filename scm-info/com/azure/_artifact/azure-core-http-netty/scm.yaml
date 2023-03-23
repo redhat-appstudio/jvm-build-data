@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://code.engineering.redhat.com/gerrit/Azure/azure-sdk-for-java"
+tagMapping:
+  - pattern: (.*)
+    tag: azure-core-http-netty_$1

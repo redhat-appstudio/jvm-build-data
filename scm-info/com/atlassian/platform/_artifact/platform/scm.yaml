@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://code.engineering.redhat.com/gerrit/atlassian/platform-poms.git"
+tagMapping:
+  - pattern: (.*)
+    tag: v$1
