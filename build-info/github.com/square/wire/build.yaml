@@ -1,4 +1,5 @@
 ---
+additionalMemory: 4096
 enforceVersion: true
 additionalArgs:
   - "-p"
