@@ -1,3 +1,4 @@
 ---
+additionalMemory: 4096
 additionalArgs:
   - "-PskipSigning=true"
