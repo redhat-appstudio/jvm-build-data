@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/apache/lucene.git"
+legacyRepos:
+  - type: "git"
+    uri: "https://github.com/apache/lucene-solr"
