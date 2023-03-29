@@ -3,7 +3,6 @@ additionalMemory: 4096
 javaVersion: "11"
 preBuildScript: |
     sed -i -e '/^afterEvaluate {$/,/^}$/d' libraries/stdlib/wasm/build.gradle.kts
-    export ALLOW_IVY_REPO=true
     microdnf install java-1.8.0-openjdk-devel
     export JDK_16=/lib/jvm/java-1.8.0
     export JDK_17=/lib/jvm/java-1.8.0
@@ -14,6 +13,7 @@ repositories:
   - "intellij-releases"
   - "intellij-dependencies"
 additionalArgs:
+  - "-DALLOW_IVY_REPO=true"
   - "-Pkotlin.build.isObsoleteJdkOverrideEnabled=true"
   - "-x"
   - "kotlin-gradle-plugin:functionalTest"

@@ -1,6 +1,4 @@
 ---
-preBuildScript: |
-  export ALLOW_IVY_REPO=true
 enforceVersion: true
 additionalArgs:
   - "-Pnative.deploy=disabled"

@@ -1,8 +1,10 @@
 ---
 preBuildScript: |
-  export ALLOW_IVY_REPO=true
+  export JDK_18="$JAVA_HOME"
+  find . -name build.gradle -exec sed -i /dokka.gradle.kts/d {} \;
 enforceVersion: true
 additionalArgs:
+  - "-DALLOW_IVY_REPO=true"
   - "-Pdisable_native_targets=true"
 repositories:
   - "all"
