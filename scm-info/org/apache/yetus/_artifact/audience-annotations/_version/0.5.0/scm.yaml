@@ -1,0 +1,4 @@
+---
+type: "git"
+uri: "https://github.com/apache/yetus.git"
+path: "audience-annotations-component"
