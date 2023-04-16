@@ -1,4 +1,132 @@
-== JVM Build Recipe Repository
+= JVM Build Recipe Repository
+:toc:
+:toclevels: 5
+
+== Introduction
 
 This repository contains information used to rebuild Java dependencies,
-including SCM information and other build related info.
+including SCM information and other build related info for the
+https://github.com/redhat-appstudio/jvm-build-service[JVM Build Service]
+
+== Layout
+
+The three sub-directories are used as follows:
+
+* repository-info describes extra third-party repositories (currently only Maven) that may be used to build an
+artifact.
+* build-info contains specific build instructions to tell the system how to build an artifact.
+* scm-info tells the system where to find the sources for a particular artifact.
+
+=== `scm.yaml`
+
+While the system will attempt to determine source location from the pom it will fall back to using the
+jvm-build-data repository. It will look up information via GAV e.g. for
+`com.fasterxml.jackson.core:jackson-databind:2.13.4.2` it will be searched for in the following
+location, from most specific to least specific:
+
+```
+scm-info/com/fasterxml/jackson/core/_artifact/jackson-databind/_version/2.13.4.2/scm.yaml <1>
+scm-info/com/fasterxml/jackson/core/_artifact/jackson-databind/scm.yaml <2>
+scm-info/com/fasterxml/jackson/core/scm.yaml <3>
+```
+<1> This approach specifies the group-id, the artifact-id and the version. Note that the version matches based on 'less than', so older versions (e.g. 2.1) would still match, while newer versions would not.
+<2> These match based on the group-id and artifact-id. This approach is good for when a specific group-id is used in lots of different repositories.
+<3> These match based on the group-id. This is the most common layout and is used when we know the majority of
+artifacts with the group id come from a single repository.
+
+
+An example of a full file is shown below:
+
+[source,yaml]
+----
+type: "git" <1>
+uri: "https://github.com/apache/commons-logging.git" <2>
+tagMapping: <3>
+  - pattern: 1\.1\.1  <4>
+    tag: commons-logging-1.1.1
+  - pattern: (\d+)\.(\d+) <5>
+    tag: LOGGING_$1_$2
+  - pattern: (\d+)\.(\d+)\.(\d+)
+    tag: LOGGING_$1_$2_$3
+legacyRepos: <6>
+  - type: "git"
+    uri: "https://github.com/javaee/metro-stax-ex.git"
+    path: "stax-ex" <7>
+----
+
+<1> The type is optional, Git is the only type supported at present
+<2> The SCM URI that contains the source
+<3> Tag mappings let you map tags to versions if the system cannot do it automatically. Mappings are tried in order
+until one is successful. If none are successful the default automatic approach is used.
+<4> This is an explicit mapping between version `1.1.1` and the tag `commons-logging-1.1.1`. This is useful if you
+have a small number of tags that don't follow the normal convention.
+<5> This maps versions in the form of `x.y` to `LOGGING_x_y`. `$n` can be used to substitute the regex capture
+groups, with $0 being the full match.
+<6> Additional repositories to search. This can be useful if a project has moved home over time.
+<7> Some projects are not in the root of the repo. The path tells us the directory they are in.
+
+`legacyRepos` may also be used if the original source has no build system. Instead, the source is forked and stored
+at https://github.com/jvm-build-service-code together an appropriate build file. An example of this is at
+https://github.com/jvm-build-service-code/cs-au-dk-dk.brics.automaton. The 1.11-8 release had no build file, so the
+project was forked and one added. This was then added to the SCM information at
+https://github.com/redhat-appstudio/jvm-build-data/blob/main/scm-info/dk/brics/_artifact/automaton/scm.yaml#L6.
+
+==== Tag Mapping Rules
+
+In most cases the `tagMapping` element is not needed. The system will attempt to figure out the tag mapping using the following heuristic. The tag mapping is only required if this heuristic fails to match:
+
+. Iterate over any provided tag mappings in order. If the version matches the pattern, and the resulting tag exists in the repo, then this tag is used.
+. Map exact matches to the tag (i.e. version `1.2.3.Final` will match tag `1.2.3.Final`).
+. If only one tag exists that contains the version then this tag is used (e.g. version `1.2.3` would match tag `1.2.3-RELEASE`, as long as there is no other tag that contains the version. If a 1.2.3-PRERELEASE was present as well then this would not match).
+. If multiple tags contain the version, but only one ends with the version, we map the tar that ends with the version (e.g. for version `1.2.3` if we have tags `acme-1.2.3` and `acme-1.2.3-rc` we will map `acme-1.2.3`).
+. Finally, if there is exactly one tag that completely matches the numeric part of the version, then we will map this tag (e.g.
+the version `1.2.3.Final` will map to the tag `1.2.3`, it will not map to `1.2` or `2.3`, as it must match the full numeric part)
+
+=== `build.yaml`
+
+It is also possible to tweak build parameters to get them to pass. This is done by adding a `build.yaml` file to the build
+data repository. For our databind example the file would go in one of the following locations:
+
+```
+build-info/github.com/FasterXML/jackson-databind/_version/2.13.4.2/build.yaml
+build-info/github.com/FasterXML/jackson-databind/build.yaml
+```
+
+The structure is based upon the repository name i.e. the above would match
+https://github.com/FasterXML/jackson-databind. The former would apply the build configuration to a specific version,
+while the latter would apply it to all of jackson-databind.
+
+An example of a complete (although nonsensical) file is shown below:
+
+```
+enforceVersion: true <1>
+additionalArgs: <2>
+  - "-DskipDocs"
+alternativeArgs: <3>
+  - "'set Global / baseVersionSuffix:=\"\"'"
+  - "enableOptimizer"
+preBuildScript: | <4>
+    ./autogen.sh
+    /bin/sh -c "$(rpm --eval %configure); $(rpm --eval %__make) $(rpm --eval %_smp_mflags)"
+additionalDownloads: <5>
+  - uri: https://github.com/mikefarah/yq/releases/download/v4.30.4/yq_linux_amd64 <6>
+    sha256: 30459aa144a26125a1b22c62760f9b3872123233a5658934f7bd9fe714d7864d <7>
+    type: executable <8>
+    fileName: yq <9>
+    binaryPath: only_for_tar/bin <10>
+  - type: rpm <11>
+    packageName: glibc-devel
+additionalMemory: 4096 <12>
+```
+<1> If the tag contains build files that do not match the version include this to override the version.
+<2> Additional parameters to add to the build command line.
+<3> A complete replacement for the build command line, this should not be used with 'additionalArgs' as it will replace them. This is mostly used in SBT builds.
+<4> A script to run before the build. This can do things like build native components that are required.
+<5> Additional downloads required for the build.
+<6> The URI to download from
+<7> The expected SHA.
+<8> The type, can be either `executable`, or `tar`.
+<9> The final file name, this will be added to `$PATH`. This is only for `executable` files.
+<10> The path to the directory inside the tar file that contains executables, this will be added to `$PATH`.
+<11> Additional RPMs to be installed prior to running the build.
+<12> If the system should allocate additional memory for the build.
