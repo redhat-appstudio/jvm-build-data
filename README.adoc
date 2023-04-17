@@ -1,6 +1,8 @@
 = JVM Build Recipe Repository
+:icons: font
 :toc:
 :toclevels: 5
+:toc-title:
 
 == Introduction
 
@@ -53,7 +55,6 @@ legacyRepos: <6>
     uri: "https://github.com/javaee/metro-stax-ex.git"
     path: "stax-ex" <7>
 ----
-
 <1> The type is optional, Git is the only type supported at present
 <2> The SCM URI that contains the source
 <3> Tag mappings let you map tags to versions if the system cannot do it automatically. Mappings are tried in order
@@ -98,7 +99,8 @@ while the latter would apply it to all of jackson-databind.
 
 An example of a complete (although nonsensical) file is shown below:
 
-```
+[source,yaml]
+----
 enforceVersion: true <1>
 additionalArgs: <2>
   - "-DskipDocs"
@@ -117,7 +119,7 @@ additionalDownloads: <5>
   - type: rpm <11>
     packageName: glibc-devel
 additionalMemory: 4096 <12>
-```
+----
 <1> If the tag contains build files that do not match the version include this to override the version.
 <2> Additional parameters to add to the build command line.
 <3> A complete replacement for the build command line, this should not be used with 'additionalArgs' as it will replace them. This is mostly used in SBT builds.
