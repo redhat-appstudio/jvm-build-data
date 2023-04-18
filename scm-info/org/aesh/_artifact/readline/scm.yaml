@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/aeshell/aesh-readline"
+tagMapping:
+  - pattern: 2.4
+    tag: 8da0f40472be4f0ef1dfdf1602e09795b98acd04

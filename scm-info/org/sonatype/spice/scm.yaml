@@ -1,0 +1,8 @@
+---
+type: "git"
+uri: "https://github.com/sonatype/oss-parents.git"
+tagMapping:
+  - pattern: (\d+)
+    tag: spice-parent-$1
+  - pattern: 15
+    tag: a4d1169c66fb21b214cb3eff2f056ec3e3695ca7
