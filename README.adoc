@@ -31,7 +31,7 @@ scm-info/com/fasterxml/jackson/core/_artifact/jackson-databind/_version/2.13.4.2
 scm-info/com/fasterxml/jackson/core/_artifact/jackson-databind/scm.yaml <2>
 scm-info/com/fasterxml/jackson/core/scm.yaml <3>
 ```
-<1> This approach specifies the group-id, the artifact-id and the version. Note that the version matches based on 'less than', so older versions (e.g. 2.1) would still match, while newer versions would not.
+<1> This approach specifies the group-id, the artifact-id and the version. Note that the version matches based on 'less than', so older versions (e.g. 2.1) would still match, while newer versions would not. Exact version matches can be specified by using exact_<version> (e.g. in this case `exact_2.13.4.2`)
 <2> These match based on the group-id and artifact-id. This approach is good for when a specific group-id is used in lots of different repositories.
 <3> These match based on the group-id. This is the most common layout and is used when we know the majority of
 artifacts with the group id come from a single repository.
