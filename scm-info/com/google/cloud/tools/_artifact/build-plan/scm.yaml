@@ -1,0 +1,7 @@
+---
+type: "git"
+uri: "https://github.com/GoogleContainerTools/jib"
+path: "build-plan"
+tagMapping:
+  - pattern: (\d+)\.(\d+)\.(\d+)
+    tag: v$1.$2.$3-build-plan
