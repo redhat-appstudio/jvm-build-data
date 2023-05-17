@@ -1,0 +1,4 @@
+---
+enforceVersion: true
+preBuildScript: |
+  find . -name pom.xml -exec sed -i s/$(params.ENFORCE_VERSION)-SNAPSHOT/$(params.ENFORCE_VERSION)/ {} \;
