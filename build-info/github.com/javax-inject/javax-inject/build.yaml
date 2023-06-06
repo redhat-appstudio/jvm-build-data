@@ -1,0 +1,2 @@
+---
+preBuildScript: mkdir -p src/main/java && mv src/javax src/main/java/javax
