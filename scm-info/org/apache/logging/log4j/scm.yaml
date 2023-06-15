@@ -1,4 +1,7 @@
 ---
 type: "git"
 uri: "https://github.com/apache/logging-log4j2.git"
+tagMapping:
+- pattern: "(.*)"
+  tag: "log4j-$1"
 uriWithoutFragment: "https://github.com/apache/logging-log4j2.git"
