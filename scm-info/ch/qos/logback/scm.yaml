@@ -1,4 +1,3 @@
 ---
 type: "git"
 uri: "https://github.com/qos-ch/logback.git"
-uriWithoutFragment: "https://github.com/qos-ch/logback.git"

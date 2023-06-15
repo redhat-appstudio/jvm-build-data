@@ -1,4 +1,3 @@
 ---
 type: "git"
 uri: "https://github.com/apache/tomcat.git"
-uriWithoutFragment: "https://github.com/apache/tomcat.git"
