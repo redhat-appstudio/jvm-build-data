@@ -1,3 +1,4 @@
 ---
 type: "git"
 uri: "https://github.com/apache/logging-log4j2.git"
+uriWithoutFragment: "https://github.com/apache/logging-log4j2.git"
