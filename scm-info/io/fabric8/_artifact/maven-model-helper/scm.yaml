@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/fabric8-launcher/maven-model-helper.git"
+tagMapping:
+  - pattern: (\d+)
+    tag: v$1

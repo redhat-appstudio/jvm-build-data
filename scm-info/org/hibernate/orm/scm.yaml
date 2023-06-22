@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/hibernate/hibernate-orm.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+).(\d+).Final
+    tag: $1.$2.$3

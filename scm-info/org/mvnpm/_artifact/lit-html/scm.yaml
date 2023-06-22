@@ -5,6 +5,6 @@ tagMapping:
   - pattern: 2.6.1
     tag: lit@2.6.1
   - pattern: 2.7.2
-    tag: lit@2.7.2
+    tag: lit-html@2.7.2
   - pattern: 2.7.4
     tag: lit@2.7.4
