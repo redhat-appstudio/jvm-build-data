@@ -1,6 +1,3 @@
 ---
 type: "git"
 uri: "https://github.com/sonatype/oss-parents.git"
-tagMapping:
-  - pattern: .*
-    tag: nexus-maven-plugins-1.6.5
