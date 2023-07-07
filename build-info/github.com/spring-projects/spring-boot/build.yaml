@@ -1,0 +1,5 @@
+---
+preBuildScript: |
+    sed -i -e 's/.*id "io.spring.gradle-enterprise-conventions.*//' -e 's/include "spring-boot-project:spring-boot-docs"//' settings.gradle
+additionalArgs:
+  - "-x asciidoctor -x asciidoctorPdf"
