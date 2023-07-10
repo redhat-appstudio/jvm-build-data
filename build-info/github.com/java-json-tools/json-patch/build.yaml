@@ -1,7 +1,7 @@
 ---
 repositories:
   - "default"
-  - "spring-plugins"
+  - "spring-plugins-milestone"
 additionalArgs:
   - "-x"
   - "checkSigningRequirements"

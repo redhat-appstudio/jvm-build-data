@@ -9,7 +9,7 @@ repositories:
   - "jitpack"
   - "jsweet"
   - "jenkins"
-  - "spring-plugins"
+  - "spring-plugins-milestone"
   - "dokkadev"
   - "ajoberstar"
   - "googleandroid"
