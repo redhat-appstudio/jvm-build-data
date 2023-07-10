@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/Azure/qpid-proton-j-extensions.git"
+tagMapping:
+  - pattern: (.*)
+    tag: qpid-proton-j-extensions_$1

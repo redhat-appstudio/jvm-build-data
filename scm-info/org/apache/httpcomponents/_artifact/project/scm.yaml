@@ -1,6 +1,6 @@
 ---
 type: "git"
-uri: "https://github.com/apache/httpcomponents-client.git"
+uri: "https://github.com/apache/httpcomponents-parent.git"
 tagMapping:
   - pattern: (.*)
     tag: rel/v$1

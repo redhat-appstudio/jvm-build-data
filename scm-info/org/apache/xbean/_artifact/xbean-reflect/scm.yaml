@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/apache/geronimo-xbean.git"
+tagMapping:
+  - pattern: (.*)
+    tag: xbean-$1

@@ -1,3 +1,6 @@
 ---
 type: "git"
-uri: "https://bitbucket.org/connect2id/oauth-2.0-sdk-with-openid-connect-extensions/src/master.git"
+uri: "https://bitbucket.org/connect2id/oauth-2.0-sdk-with-openid-connect-extensions.git"
+tagMapping:
+  - pattern: (.*)
+    tag: release-$1
