@@ -3,3 +3,5 @@ additionalMemory: 4096
 additionalArgs:
   - "-DskipDocs=true"
   - "-Dno-test-modules"
+repositories:
+  - "confluent"
