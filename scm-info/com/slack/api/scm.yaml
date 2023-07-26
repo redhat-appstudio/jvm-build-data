@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/slackapi/java-slack-sdk.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+)\.(\d+)
+    tag: v$1.$2.$3

@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/oracle/graal.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+).(\d+)
+    tag: vm-ce-$1.$2.$3

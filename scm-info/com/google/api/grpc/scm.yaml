@@ -1,6 +1,12 @@
 ---
 type: "git"
-uri: "https://github.com/googleapis/gapic-generator-java.git"
+uri: "https://github.com/googleapis/sdk-platform-java.git"
 tagMapping:
-  - pattern: 2.14.3
-    tag: v2.15.3
+  - pattern: 2.19.1
+    tag: v2.20.1
+legacyRepos:
+  - type: "git"
+    uri: "https://github.com/googleapis/gapic-generator-java.git"
+    tagMapping:
+      - pattern: 2.14.3
+        tag: v2.15.3

@@ -1,0 +1,7 @@
+---
+type: "git"
+uri: "https://bitbucket.org/atlassian/atlassian-httpclient.git"
+path: "httpclient-api"
+tagMapping:
+  - pattern: (\d+)\.(\d+)\.(\d+)
+    tag: atlassian-httpclient-$1.$2.$3
