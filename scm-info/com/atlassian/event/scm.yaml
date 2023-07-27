@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://bitbucket.org/atlassian/atlassian-event.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+)\.(\d+)
+    tag: atlassian-event-$1.$2.$3

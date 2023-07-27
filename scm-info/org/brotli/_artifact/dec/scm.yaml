@@ -1,0 +1,7 @@
+---
+type: "git"
+uri: "https://github.com/google/brotli.git"
+path: "java/org/brotli/dec"
+tagMapping:
+  - pattern: "0.1.2"
+    tag: "9910c4c9374bffb5d79751eac4be19ec80245eba"

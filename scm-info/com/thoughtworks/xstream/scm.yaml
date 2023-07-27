@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/x-stream/xstream.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+)\.(\d+)
+    tag: XSTREAM_$1_$2_$3

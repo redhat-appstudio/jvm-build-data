@@ -6,3 +6,5 @@ tagMapping:
     tag: snakeyaml-engine-$1.$2
   - pattern: (\d+)\.(\d+)\.(\d+)
     tag: snakeyaml-engine-$1.$2.$3
+  - pattern: 2.3
+    tag: 70e67ac3b3cb670b10329ab97e45d4a66c52cd9a

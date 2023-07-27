@@ -1,3 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/awslabs/aws-eventstream-java.git"
+tagMapping:
+  - pattern: "1.0.1"
+    tag: "7be2dd80e12f8835674c8ffb0f4a2efb64c7b585"

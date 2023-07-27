@@ -1,3 +1,4 @@
 ---
 type: "git"
 uri: "https://github.com/eclipse-vertx/vertx-auth.git"
+path: "vertx-auth-common"

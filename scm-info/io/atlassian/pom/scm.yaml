@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://bitbucket.org/atlassian/atlassian-util-concurrent.git"
+tagMapping:
+  - pattern: (\d+)\.(\d+)\.(\d+)
+    tag: atlassian-util-concurrent-$1.$2.$3
