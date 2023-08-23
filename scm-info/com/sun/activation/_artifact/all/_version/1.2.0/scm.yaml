@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/javaee/activation"
+tagMapping:
+  - pattern: "1.2.0"
+    tag: "8f8ec08d736983c839d31a7bd98d29594e508785"

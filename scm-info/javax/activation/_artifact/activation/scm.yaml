@@ -1,0 +1,11 @@
+---
+type: "git"
+uri: "https://github.com/javaee/activation"
+tagMapping:
+  - pattern: "1.2.0"
+    tag: "JAF-1_2_0"
+  - pattern: "1.1.1"
+    tag: "1.1.1"
+legacyrepos:
+  - type: "git"
+    uri: "https://github.com/jvm-build-service-code/glassfish-jaf"
