@@ -1,3 +1,7 @@
+- version: "8.4"
+  maxJdkVersion: 20
+  minJdkVersion: 8
+  releaseDate: "2023-10-04"
 - version: "8.3"
   maxJdkVersion: 20
   minJdkVersion: 8
