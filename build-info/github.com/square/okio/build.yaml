@@ -6,3 +6,6 @@ additionalArgs:
 additionalDownloads:
   - type: rpm
     packageName: zip
+repositories:
+  - "all"
+  - "google"
