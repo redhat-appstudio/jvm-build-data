@@ -1,0 +1,4 @@
+---
+preBuildScript: |
+  sed -Ei 's/<goal>javadoc<\/goal>//' pom.xml
+  sed -Ei 's/<goal>site<\/goal>//' pom.xml
