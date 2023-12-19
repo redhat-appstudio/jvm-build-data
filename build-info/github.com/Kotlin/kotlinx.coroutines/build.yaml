@@ -4,3 +4,5 @@ additionalMemory: 4096
 repositories:
   - "all"
   - "jetbrains-kotlinx"
+preBuildScript: |
+    export JDK_16=/usr/lib/java-1.8.0
