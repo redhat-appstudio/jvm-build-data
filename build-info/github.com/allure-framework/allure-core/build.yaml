@@ -1,0 +1,4 @@
+---
+preBuildScript: |
+  sed -Ei 's/<nodeVersion>v5.0.0/<nodeVersion>v6.0.0/' allure-report-face/pom.xml
+  sed -Ei 's/<npmVersion>3.5.1/<npmVersion>4.0.0/' allure-report-face/pom.xml
