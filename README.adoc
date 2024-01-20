@@ -12,12 +12,14 @@ https://github.com/redhat-appstudio/jvm-build-service[JVM Build Service]
 
 == Layout
 
-The three sub-directories are used as follows:
+The five subdirectories are used as follows:
 
-* repository-info describes extra third-party repositories (currently only Maven) that may be used to build an
+* `repository-info` describes extra third-party repositories (currently only Maven) that may be used to build an
 artifact.
-* build-info contains specific build instructions to tell the system how to build an artifact.
-* scm-info tells the system where to find the sources for a particular artifact.
+* `build-info` contains specific build instructions to tell the system how to build an artifact.
+* `scm-info` tells the system where to find the sources for a particular artifact.
+* `build-tool-info` contains release information for various build tools.
+* `disabled-plugins` contains the globally disabled plugins for each build tool.
 
 === `scm.yaml`
 
@@ -26,11 +28,12 @@ jvm-build-data repository. It will look up information via GAV e.g. for
 `com.fasterxml.jackson.core:jackson-databind:2.13.4.2` it will be searched for in the following
 location, from most specific to least specific:
 
-```
+[source]
+----
 scm-info/com/fasterxml/jackson/core/_artifact/jackson-databind/_version/2.13.4.2/scm.yaml <1>
 scm-info/com/fasterxml/jackson/core/_artifact/jackson-databind/scm.yaml <2>
 scm-info/com/fasterxml/jackson/core/scm.yaml <3>
-```
+----
 <1> This approach specifies the group-id, the artifact-id and the version. Note that the version matches based on 'less than', so older versions (e.g. 2.1) would still match, while newer versions would not. Exact version matches can be specified by using exact_<version> (e.g. in this case `exact_2.13.4.2`)
 <2> These match based on the group-id and artifact-id. This approach is good for when a specific group-id is used in lots of different repositories.
 <3> These match based on the group-id. This is the most common layout and is used when we know the majority of
@@ -80,7 +83,7 @@ In most cases the `tagMapping` element is not needed. The system will attempt to
 
 . Iterate over any provided tag mappings in order. If the version matches the pattern, and the resulting tag exists in the repo, then this tag is used.
 . Map exact matches to the tag (i.e. version `1.2.3.Final` will match tag `1.2.3.Final`).
-. If only one tag exists that contains the version then this tag is used (e.g. version `1.2.3` would match tag `1.2.3-RELEASE`, as long as there is no other tag that contains the version. If a 1.2.3-PRERELEASE was present as well then this would not match).
+. If only one tag exists that contains the version then this tag is used (e.g. version `1.2.3` would match tag `1.2.3-RELEASE`, as long as there is no other tag that contains the version. If a 1.2.3-PRERELEASE was present as well, then this would not match).
 . If multiple tags contain the version, but only one ends with the version, we map the tar that ends with the version (e.g. for version `1.2.3` if we have tags `acme-1.2.3` and `acme-1.2.3-rc` we will map `acme-1.2.3`).
 . Finally, if there is exactly one tag that completely matches the numeric part of the version, then we will map this tag (e.g.
 the version `1.2.3.Final` will map to the tag `1.2.3`, it will not map to `1.2` or `2.3`, as it must match the full numeric part)
@@ -144,3 +147,48 @@ additionalBuilds: <13>
 <12> If the system should allocate additional memory for the build.
 <13> This is used for additional builds that are alternate to the default. Each name (e.g. `pureJava`) should match to a hash fragment
 in `scm.yaml`. Complete recipe information for the build must be included as it is **not** combined with the parent information.
+
+=== `tool.yaml`
+
+This file contains release information about a build tool.
+
+[source,yaml]
+----
+- version: "8.4" <1>
+  maxJdkVersion: 20 <2>
+  minJdkVersion: 8 <3>
+  releaseDate: "2023-10-04" <4>
+----
+<1> The version string for a particular release.
+<2> The maximum JDK version number supported by the release.
+<3> The minimum JDK version number supported by the release.
+<4> The date of the release as specified in https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html[`java.text.SimpleDateFormat`].
+
+
+=== Disabled Plugins
+
+The `disabled-plugins` directory contains `.yaml` files with the basename of the file being that of the build tool, e.g., `maven.yaml` for Maven and `gradle.yaml` for Gradle.
+
+==== `maven.yaml`
+
+This file contains the globally disabled plugins (for Maven) which can be overridden on a per-build basis via the `disabledPlugins` key in `build.yaml`.
+
+[source,yaml]
+----
+disabledPlugins: <1>
+  - "org.glassfish.copyright:glassfish-copyright-maven-plugin" <2>
+----
+<1> The `disabledPlugins` key (and only this key) must be present followed by the plugin list.
+<2> The list of disabled plugins are strings in tool-specific format, e.g., `"<groupdId>:<artifactId>"` for Maven.
+
+==== `gradle.yaml`
+
+This file contains the globally disabled plugins (for Gradle) which can be overridden on a per-build basis via the `disabledPlugins` key in `build.yaml`.
+
+[source,yaml]
+----
+disabledPlugins: <1>
+  - "kotlin.gradle.targets.js" <2>
+----
+<1> The `disabledPlugins` key (and only this key) must be present followed by the plugin list.
+<2> The list of disabled plugins are strings in tool-specific format, e.g., ``"<pluginId>"` for Gradle.
