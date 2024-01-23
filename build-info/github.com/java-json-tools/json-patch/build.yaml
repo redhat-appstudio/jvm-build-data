@@ -5,3 +5,7 @@ repositories:
 additionalArgs:
   - "-x"
   - "checkSigningRequirements"
+preBuildScript: |
+  sed -i /options.addStringOption/d build.gradle
+  sed -i -e 's/0.0.7/0.0.7-SNAPSHOT/' build.gradle
+  sed -i -e 's/repo.springsource.org\/plugins-release/repo.spring.io\/plugins-snapshot/' build.gradle
