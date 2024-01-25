@@ -191,4 +191,4 @@ disabledPlugins: <1>
   - "kotlin.gradle.targets.js" <2>
 ----
 <1> The `disabledPlugins` key (and only this key) must be present followed by the plugin list.
-<2> The list of disabled plugins are strings in tool-specific format, e.g., ``"<pluginId>"` for Gradle.
+<2> The list of disabled plugins are strings in tool-specific format, e.g., ``"<packageNameOfTask>"` for Gradle.
