@@ -5,3 +5,7 @@ repositories:
 additionalArgs:
   - "-x"
   - "checkSigningRequirements"
+preBuildScript: |
+  sed -i /options.addStringOption/d build.gradle
+  sed -i /.*propdeps.*/d build.gradle
+  sed -i -e 's/provided/compileOnly/' project.gradle
