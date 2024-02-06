@@ -1,5 +1,6 @@
 ---
 enforceVersion: true
-additionalArgs: jarall
+additionalArgs:
+    - jarall
 postBuildScript: |
     mvn -B -e -s "$(workspaces.build-settings.path)/settings.xml" org.apache.maven.plugins:maven-deploy-plugin:3.1.0:deploy-file "-Durl=file:$(workspaces.source.path)/artifacts" -DpomFile=pom.xml -Dfile=dist/bsh-$(params.ENFORCE_VERSION).jar
