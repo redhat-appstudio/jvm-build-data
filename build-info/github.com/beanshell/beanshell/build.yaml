@@ -1,5 +1,6 @@
 ---
 enforceVersion: true
+tool: ant
 additionalArgs:
     - jarall
 postBuildScript: |
