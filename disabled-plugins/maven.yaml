@@ -5,3 +5,4 @@ disabledPlugins:
   - "org.codehaus.mojo:findbugs-maven-plugin" # older version of this will break the build on our version of maven
   - "de.jjohannes:gradle-module-metadata-maven-plugin"
   - "org.jboss.maven.plugins:maven-jdocbook-plugin"
+  - "org.codehaus.mojo:cobertura-maven-plugin"
