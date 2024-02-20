@@ -1,0 +1,11 @@
+---
+additionalArgs:
+  - "dist"
+postBuildScript: |
+    mvn -B -e -s "$(workspaces.build-settings.path)/settings.xml" org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M2:deploy-file "-Durl=file:$(workspaces.source.path)/artifacts" -DpomFile=output/dist/lib/asm-$(params.PROJECT_VERSION).pom -Dfile=output/dist/lib/asm-$(params.PROJECT_VERSION).jar
+    mvn -B -e -s "$(workspaces.build-settings.path)/settings.xml" org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M2:deploy-file "-Durl=file:$(workspaces.source.path)/artifacts" -DpomFile=output/dist/lib/asm-analysis-$(params.PROJECT_VERSION).pom -Dfile=output/dist/lib/asm-analysis-$(params.PROJECT_VERSION).jar
+    mvn -B -e -s "$(workspaces.build-settings.path)/settings.xml" org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M2:deploy-file "-Durl=file:$(workspaces.source.path)/artifacts" -DpomFile=output/dist/lib/asm-commons-$(params.PROJECT_VERSION).pom -Dfile=output/dist/lib/asm-commons-$(params.PROJECT_VERSION).jar
+    mvn -B -e -s "$(workspaces.build-settings.path)/settings.xml" org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M2:deploy-file "-Durl=file:$(workspaces.source.path)/artifacts" -DpomFile=output/dist/lib/asm-tree-$(params.PROJECT_VERSION).pom -Dfile=output/dist/lib/asm-tree-$(params.PROJECT_VERSION).jar
+    mvn -B -e -s "$(workspaces.build-settings.path)/settings.xml" org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M2:deploy-file "-Durl=file:$(workspaces.source.path)/artifacts" -DpomFile=output/dist/lib/asm-util-$(params.PROJECT_VERSION).pom -Dfile=output/dist/lib/asm-util-$(params.PROJECT_VERSION).jar
+    mvn -B -e -s "$(workspaces.build-settings.path)/settings.xml" org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M2:deploy-file "-Durl=file:$(workspaces.source.path)/artifacts" -DpomFile=output/dist/lib/asm-xml-$(params.PROJECT_VERSION).pom -Dfile=output/dist/lib/asm-xml-$(params.PROJECT_VERSION).jar
+    mvn -B -e -s "$(workspaces.build-settings.path)/settings.xml" org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M2:deploy-file "-Durl=file:$(workspaces.source.path)/artifacts" -DpomFile=output/dist/lib/asm-parent-$(params.PROJECT_VERSION).pom -Dfile=output/dist/lib/asm-parent-$(params.PROJECT_VERSION).pom
