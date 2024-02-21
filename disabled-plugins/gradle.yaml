@@ -1,4 +1,5 @@
 disabledPlugins:
+  - "com.diffplug.gradle.spotless"
   - "kotlin.gradle.targets.js"
   - "org.gradle.api.plugins.quality"
   - "org.gradle.plugins.signing"
