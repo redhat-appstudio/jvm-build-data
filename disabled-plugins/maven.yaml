@@ -6,3 +6,4 @@ disabledPlugins:
   - "de.jjohannes:gradle-module-metadata-maven-plugin"
   - "org.codehaus.mojo:cobertura-maven-plugin"
   - "com.diffplug.spotless:spotless-maven-plugin"
+  - "io.fabric8:docker-maven-plugin"
