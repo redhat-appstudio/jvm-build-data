@@ -1,5 +1,5 @@
 ---
-additionalMemory: 4096
+additionalMemory: 6144
 additionalArgs:
   - "-DskipDocs=true"
   - "-Dno-test-modules"
