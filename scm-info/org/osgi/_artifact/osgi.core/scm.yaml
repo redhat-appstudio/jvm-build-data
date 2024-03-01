@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/osgi/osgi.git"
 tagMapping:
-  - pattern: "(\d+).0.0"
+  - pattern: (\d+).0.0
     tag: "r$1-core-spec-final"
