@@ -6,6 +6,10 @@
   maxJdkVersion: 20
   minJdkVersion: 8
   releaseDate: "2023-08-17"
+- version: "7.6.3"
+  maxJdkVersion: 19
+  minJdkVersion: 8
+  releaseDate: "2023-08-04"
 - version: "8.2.1"
   maxJdkVersion: 19
   minJdkVersion: 8
