@@ -6,3 +6,6 @@ additionalArgs:
   - "asciidoctor"
   - "-x"
   - "asciidoctorPdf"
+  - "-x"
+  - "javadoc"
+additionalMemory: 6144
