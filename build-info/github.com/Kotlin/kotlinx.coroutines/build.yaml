@@ -4,7 +4,6 @@ preBuildScript: |
   find . -name build.gradle -exec sed -i /dokka.gradle.kts/d {} \;
 enforceVersion: true
 additionalArgs:
-  - "-DALLOW_IVY_REPO=true"
   - "-Pdisable_native_targets=true"
 repositories:
   - "all"

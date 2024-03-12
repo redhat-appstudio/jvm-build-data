@@ -13,7 +13,6 @@ repositories:
   - "intellij-releases"
   - "intellij-dependencies"
 additionalArgs:
-  - "-DALLOW_IVY_REPO=true"
   - "-Pkotlin.build.isObsoleteJdkOverrideEnabled=true"
   - "-x"
   - "kotlin-gradle-plugin:functionalTest"
