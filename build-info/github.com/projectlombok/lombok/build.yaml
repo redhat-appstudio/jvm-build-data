@@ -1,6 +1,3 @@
 ---
-enforceVersion: true
 additionalArgs:
   - "maven"
-postBuildScript: |
-    mvn -B -e -s "$(workspaces.build-settings.path)/settings.xml" org.apache.maven.plugins:maven-deploy-plugin:3.1.0:deploy-file "-Durl=file:$(workspaces.source.path)/artifacts" -DpomFile=build/pom.xml -Dfile=dist/lombok-$(params.ENFORCE_VERSION).jar -Dfiles=dist/lombok-$(params.ENFORCE_VERSION)-sources.jar,dist/lombok-$(params.ENFORCE_VERSION)-javadoc.jar -Dclassifiers=sources,javadoc -Dtypes=jar,jar

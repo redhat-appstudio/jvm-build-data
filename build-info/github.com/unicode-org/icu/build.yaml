@@ -2,10 +2,8 @@
 enforceVersion: true
 additionalArgs:
   - "release"
-postBuildScript: |
+preBuildScript: |
+    mkdir -p release
     sed -e "s|@POMVERSION@|$(params.ENFORCE_VERSION)|g;" maven/icu4j/pom.xml > release/icu4j.pom
-    mvn -B -e -s "$(workspaces.build-settings.path)/settings.xml" org.apache.maven.plugins:maven-deploy-plugin:3.1.0:deploy-file "-Durl=file:$(workspaces.source.path)/artifacts" -DpomFile=release/icu4j.pom -Dfile=release/icu4j.jar -Dfiles=release/icu4j-src.jar,release/icu4j-docs.jar -Dclassifiers=sources,javadoc -Dtypes=jar,jar
     sed -e "s|@POMVERSION@|$(params.ENFORCE_VERSION)|g;" maven/icu4j-charset/pom.xml > release/icu4j-charset.pom
-    mvn -B -e -s "$(workspaces.build-settings.path)/settings.xml" org.apache.maven.plugins:maven-deploy-plugin:3.1.0:deploy-file "-Durl=file:$(workspaces.source.path)/artifacts" -DpomFile=release/icu4j-charset.pom -Dfile=release/icu4j-charset.jar -Dfiles=release/icu4j-charset-src.jar -Dclassifiers=sources -Dtypes=jar
     sed -e "s|@POMVERSION@|$(params.ENFORCE_VERSION)|g;" maven/icu4j-localespi/pom.xml > release/icu4j-localespi.pom
-    mvn -B -e -s "$(workspaces.build-settings.path)/settings.xml" org.apache.maven.plugins:maven-deploy-plugin:3.1.0:deploy-file "-Durl=file:$(workspaces.source.path)/artifacts" -DpomFile=release/icu4j-localespi.pom -Dfile=release/icu4j-localespi.jar -Dfiles=release/icu4j-localespi-src.jar -Dclassifiers=sources -Dtypes=jar
