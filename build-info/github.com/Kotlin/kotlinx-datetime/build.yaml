@@ -1,6 +1,8 @@
 ---
-additionalArgs:
-  - "-DALLOW_IVY_REPO=true"
 repositories:
   - "all"
   - "jetbrains-kotlinx"
+additionalMemory: 4096
+additionalArgs:
+  - "-x"
+  - "linuxX64Test"
