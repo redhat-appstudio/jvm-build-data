@@ -152,6 +152,25 @@ additionalBuilds: <14>
 <14> This is used for additional builds that are alternate to the default. Each name (e.g. `pureJava`) should match to a hash fragment
 in `scm.yaml`. Complete recipe information for the build must be included as it is **not** combined with the parent information.
 
+==== Environment Variables
+
+Note that within the build pod (for instance, accessible by the `preBuildScript`) several variables are defined:
+
+* `PROJECT_VERSION` which is set to the version of the artifact that is being built.
+* `MAVEN_HOME` where the current version of Maven is installed to.
+* `GRADLE_HOME` where the current version of Gradle is installed to *[optional]*
+* `JAVA_HOME` where the current version of Java is installed to
+* `ENFORCE_VERSION` if enforceVersion (see above) has been defined.
+
+==== Java Installations
+
+Currently, the following Java installations are available (in case a build requires multiple versions of a JDK):
+
+* `/usr/lib/java-1.8.0`
+* `/usr/lib/java-11`
+* `/usr/lib/java-17`
+* `/usr/lib/java-21`
+
 === `tool.yaml`
 
 This file contains release information about a build tool.
