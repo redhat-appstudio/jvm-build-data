@@ -3,6 +3,3 @@ repositories:
   - "all"
   - "jetbrains-kotlinx"
 additionalMemory: 4096
-additionalArgs:
-  - "-x"
-  - "linuxX64Test"

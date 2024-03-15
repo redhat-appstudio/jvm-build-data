@@ -1,10 +1,6 @@
 ---
-preBuildScript: |
-  export JDK_18="$JAVA_HOME"
-  find . -name build.gradle -exec sed -i /dokka.gradle.kts/d {} \;
-enforceVersion: true
-additionalArgs:
-  - "-Pdisable_native_targets=true"
+javaVersion: "11"
+additionalMemory: 4096
 repositories:
   - "all"
   - "jetbrains-kotlinx"
