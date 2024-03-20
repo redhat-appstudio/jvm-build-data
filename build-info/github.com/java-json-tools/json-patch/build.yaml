@@ -1,6 +1,5 @@
 ---
 repositories:
-  - "default"
   - "spring-plugins-milestone"
 additionalArgs:
   - "-x"
