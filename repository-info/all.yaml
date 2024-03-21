@@ -11,6 +11,7 @@ repositories:
   - "jcs"
   - "jenkins-public"
   - "jenkins-releases"
+  - "jetbrains-teamcity"
   - "jitpack"
   - "jsweet"
   - "kotlin-bootstrap"
