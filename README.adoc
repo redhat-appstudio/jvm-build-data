@@ -215,6 +215,25 @@ Currently, the following Gradle installations are available:
 
 These are defined by the https://github.com/redhat-appstudio/jvm-build-service-builder-images[jvm-build-service-builder-images]
 
+==== Custom Repository Handling
+
+By default, for Gradle builds, the system will remove Maven repositories and inject a reference to the cache. It is possible to modify this by setting:
+
+[source]
+----
+export DISABLE_JBS_REPOSITORY_PLUGIN=true
+export DISABLE_OLD_REPOSITORIES=true
+----
+
+The former completely disables the repository plugin while the latter only disables the repository removal. This is useful in cases where the project's configuration clashes with our plugin and/or it provides its own method to inject a replacement Maven repository (of which Kotlin does):
+
+[source]
+----
+additionalArgs:
+- "-Pkotlin.build.isObsoleteJdkOverrideEnabled=true"
+- "-Pmaven.repository.mirror=$(CACHE_URL)"
+----
+
 === `tool.yaml`
 
 This file contains release information about a build tool.
