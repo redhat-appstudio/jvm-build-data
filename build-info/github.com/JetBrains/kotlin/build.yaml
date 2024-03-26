@@ -14,3 +14,7 @@ repositories:
 additionalArgs:
   - "-Pkotlin.build.isObsoleteJdkOverrideEnabled=true"
   - "-Pmaven.repository.mirror=$(CACHE_URL)"
+  - "-PdeployVersion=$(params.PROJECT_VERSION)"
+postBuildScript: |
+  mvn -DnewVersion=$(params.PROJECT_VERSION) -DgenerateBackupPoms=false -DprocessAllModules=true -f libraries/pom.xml versions:set
+  mvn -V -B -e -s $(workspaces.build-settings.path)/settings.xml -DaltDeploymentRepository=local::file:$(workspaces.source.path)/artifacts -DskipTests -DuseJBSDeployed -f libraries/pom.xml package org.apache.maven.plugins:maven-deploy-plugin:3.1.1:deploy

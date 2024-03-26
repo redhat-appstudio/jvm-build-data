@@ -135,6 +135,8 @@ additionalBuilds: <14>
     additionalArgs:
       - "-Dlz4-pure-java=true"
 toolVersion: 3.8.8 <15>
+postBuildScript: | <16>
+    mvn -DnewVersion=$(PROJECT_VERSION) -DgenerateBackupPoms=false -DprocessAllModules=true -f libraries/pom.xml versions:set
 
 ----
 <1> If the tag contains build files that do not match the version include this to override the version.
@@ -153,6 +155,7 @@ toolVersion: 3.8.8 <15>
 <14> This is used for additional builds that are alternate to the default. Each name (e.g. `pureJava`) should match to a hash fragment
 in `scm.yaml`. Complete recipe information for the build must be included as it is **not** combined with the parent information.
 <15> This is used to override and denote a particular tool version to use.
+<16> A script to run after the build. Useful if a build requires a secondary tool to run to complete the deployment.
 
 ==== Environment Variables
 
