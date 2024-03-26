@@ -1,0 +1,3 @@
+---
+additionalArgs:
+  - "-Pversion=$(PROJECT_VERSION)"

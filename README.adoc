@@ -134,6 +134,7 @@ additionalBuilds: <14>
         /bin/sh -c "$(rpm --eval %configure); $(rpm --eval %__make) $(rpm --eval %_smp_mflags)"
     additionalArgs:
       - "-Dlz4-pure-java=true"
+toolVersion: 3.8.8 <15>
 
 ----
 <1> If the tag contains build files that do not match the version include this to override the version.
@@ -148,9 +149,10 @@ additionalBuilds: <14>
 <10> The path to the directory inside the tar file that contains executables, this will be added to `$PATH`.
 <11> Additional RPMs to be installed prior to running the build.
 <12> If the system should allocate additional memory for the build.
-<13> This is used to enforce a particular Java version.
+<13> This is used to enforce a particular Java version. See below for available Java versions.
 <14> This is used for additional builds that are alternate to the default. Each name (e.g. `pureJava`) should match to a hash fragment
 in `scm.yaml`. Complete recipe information for the build must be included as it is **not** combined with the parent information.
+<15> This is used to override and denote a particular tool version to use.
 
 ==== Environment Variables
 
@@ -161,15 +163,76 @@ Note that within the build pod (for instance, accessible by the `preBuildScript`
 * `GRADLE_HOME` where the current version of Gradle is installed to *[optional]*
 * `JAVA_HOME` where the current version of Java is installed to
 * `ENFORCE_VERSION` if enforceVersion (see above) has been defined.
+* `CACHE_URL` is defined to point to the JBS cache which handles all dependency requests and tracking.
+* `TOOL_VERSION` is the version of the build tool being used
+
+Note that to use these within `additionalArgs` it is recommended to use the following pattern:
+
+[source]
+----
+additionalArgs:
+  - "-Dmaven.repository.mirror=$(CACHE_URL)"
+----
 
 ==== Java Installations
 
 Currently, the following Java installations are available (in case a build requires multiple versions of a JDK):
 
-* `/usr/lib/java-1.8.0`
-* `/usr/lib/java-11`
-* `/usr/lib/java-17`
-* `/usr/lib/java-21`
+* /usr/lib/java-1.7.0 (only available within a UBI7 builder image)
+* /usr/lib/java-1.8.0
+* /usr/lib/java-11
+* /usr/lib/java-17
+* /usr/lib/java-21
+
+
+==== Maven Installations
+
+Currently, the following Maven installations are available:
+
+* /opt/maven/3.8.8
+* /opt/maven/3.9.5
+
+These are defined by the https://github.com/redhat-appstudio/jvm-build-service-builder-images[jvm-build-service-builder-images]
+
+==== Gradle Installations
+
+Currently, the following Gradle installations are available:
+
+* /opt/gradle/8.6
+* /opt/gradle/8.4
+* /opt/gradle/8.3
+* /opt/gradle/8.0.2
+* /opt/gradle/7.6.3
+* /opt/gradle/7.5.1
+* /opt/gradle/7.4.2
+* /opt/gradle/7.3.3
+* /opt/gradle/6.9.4
+* /opt/gradle/6.4.1
+* /opt/gradle/6.2.2
+* /opt/gradle/5.6.4
+* /opt/gradle/5.3.1
+* /opt/gradle/4.10.3
+
+These are defined by the https://github.com/redhat-appstudio/jvm-build-service-builder-images[jvm-build-service-builder-images]
+
+==== Custom Repository Handling
+
+By default, for Gradle builds, the system will remove Maven repositories and inject a reference to the cache. It is possible to modify this by setting:
+
+[source]
+----
+export DISABLE_JBS_REPOSITORY_PLUGIN=true
+export DISABLE_OLD_REPOSITORIES=true
+----
+
+The former completely disables the repository plugin while the latter only disables the repository removal. This is useful in cases where the project's configuration clashes with our plugin and/or it provides its own method to inject a replacement Maven repository (of which Kotlin does):
+
+[source]
+----
+additionalArgs:
+- "-Pkotlin.build.isObsoleteJdkOverrideEnabled=true"
+- "-Pmaven.repository.mirror=$(CACHE_URL)"
+----
 
 === `tool.yaml`
 

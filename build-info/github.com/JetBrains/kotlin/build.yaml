@@ -1,43 +1,16 @@
 ---
-additionalMemory: 4096
+additionalMemory: 6144
 javaVersion: "11"
 preBuildScript: |
-    sed -i -e '/^afterEvaluate {$/,/^}$/d' libraries/stdlib/wasm/build.gradle.kts
-    microdnf install java-1.8.0-openjdk-devel
     export JDK_16=/lib/jvm/java-1.8.0
     export JDK_17=/lib/jvm/java-1.8.0
     export JDK_18=/lib/jvm/java-1.8.0
     export JDK_9=/lib/jvm/java-11
+    export DISABLE_JBS_REPOSITORY_PLUGIN=true
 repositories:
   - "all"
   - "intellij-releases"
   - "intellij-dependencies"
 additionalArgs:
   - "-Pkotlin.build.isObsoleteJdkOverrideEnabled=true"
-  - "-x"
-  - "kotlin-gradle-plugin:functionalTest"
-  - "-x"
-  - "kotlin-gradle-plugin-integration-tests:kgpDaemonTests"
-  - "-x"
-  - "kotlin-gradle-plugin-integration-tests:kgpSimpleTests"
-  - "-x"
-  - "kotlin-gradle-plugin-integration-tests:testAdvanceGradleVersion"
-  - "-x"
-  - "kotlin-stdlib-jdk7:testJdk6Tests"
-  - "-x"
-  - "kotlin-stdlib-jdk7:testNoJdk7"
-  - "-x"
-  - "kotlin-stdlib-jdk8:jdk10Test"
-  - "-x"
-  - "kotlin-stdlib-jdk8:jdk11Test"
-  - "-x"
-  - "kotlin-stdlib-jdk8:jdk9Test"
-  - "-x"
-  - "kotlin-stdlib-jdk8:testJdk6Tests"
-  - "-x"
-  - "kotlin-test-js-runner:yarn"
-  - "-x"
-  - "kotlin-test-js-runner:yarnBuild"
-  - "-x"
-  - "kotlin-test-js-runner:yarnSetup"
-  - "-DdokkaPlugin=false"
+  - "-Pmaven.repository.mirror=$(CACHE_URL)"

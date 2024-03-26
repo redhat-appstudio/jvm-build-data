@@ -1,6 +1,4 @@
 ---
-repositories:
-  - "default"
 additionalArgs:
   - "-x"
   - ":jackson-coreutils-equivalence:build"
