@@ -13,7 +13,7 @@ repositories:
   - "intellij-dependencies"
 additionalArgs:
   - "-Pkotlin.build.isObsoleteJdkOverrideEnabled=true"
-  - "-Pmaven.repository.mirror=$(CACHE_URL)"
+  - "-Pmaven.repository.mirror=$(params.CACHE_URL)"
   - "-PdeployVersion=$(params.PROJECT_VERSION)"
 postBuildScript: |
   mvn -DnewVersion=$(params.PROJECT_VERSION) -DgenerateBackupPoms=false -DprocessAllModules=true -f libraries/pom.xml versions:set
