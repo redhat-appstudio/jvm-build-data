@@ -1,4 +1,6 @@
 ---
-enforceVersion: true
 repositories:
   - "jcs"
+preBuildScript: |
+    export PUBLISHING_PASSWORD="none"
+    export JDK_5=/lib/jvm/java-1.8.0
