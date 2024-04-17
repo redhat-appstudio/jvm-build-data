@@ -1,4 +1,4 @@
 ---
 preBuildScript: |
-  export RELEASE_VERSION=$PROJECT_VERSION
+  export RELEASE_VERSION=$(params.PROJECT_VERSION)
 additionalMemory: 4096
