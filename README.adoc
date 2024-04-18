@@ -234,11 +234,11 @@ By default, for Gradle builds, the system will remove Maven repositories and inj
 
 [source]
 ----
-export DISABLE_JBS_REPOSITORY_PLUGIN=true
-export DISABLE_OLD_REPOSITORIES=true
+export JBS_DISABLE_CACHE=true
+export JBS_DISABLE_GRADLE_REPOSITORIES=false
 ----
 
-The former completely disables the repository plugin while the latter only disables the repository removal. This is useful in cases where the project's configuration clashes with our plugin and/or it provides its own method to inject a replacement Maven repository (of which Kotlin does):
+The former completely disables the repository plugin (which routes requests to the cache) while the latter only disables the repository removal. This is useful in cases where the project's configuration clashes with our plugin and/or it provides its own method to inject a replacement Maven repository (of which Kotlin does):
 
 [source]
 ----
