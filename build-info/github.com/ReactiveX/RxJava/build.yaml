@@ -1,2 +1,4 @@
 ---
 enforceVersion: true
+preBuildScript: |
+  sed -i -E 's/(classpath "ru.vyarus:gradle-animalsniffer-plugin):1.2.0/\1:1.4.6/' build.gradle
