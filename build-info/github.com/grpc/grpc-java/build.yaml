@@ -1,3 +1,4 @@
 ---
 additionalArgs:
   - "-PskipAndroid=true"
+  - "-PskipCodegen=true"
