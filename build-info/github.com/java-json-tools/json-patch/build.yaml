@@ -7,4 +7,5 @@ additionalArgs:
 preBuildScript: |
   sed -i /options.addStringOption/d build.gradle
   sed -i /.*propdeps.*/d build.gradle
-  sed -i -e 's/provided/compileOnly/' project.gradle
+  [[ -f project.gradle ]] && sed -i -e 's/provided/compileOnly/' project.gradle
+  [[ -f build.gradle ]] && sed -i -e 's/provided/compileOnly/' build.gradle
