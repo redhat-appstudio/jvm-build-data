@@ -1,2 +1,4 @@
 ---
 enforceVersion: true
+additionalArgs: 
+  -"-PhibernateVersion=$PROJECT_VERSION"
