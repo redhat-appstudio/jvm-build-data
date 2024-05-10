@@ -1,4 +1,4 @@
 ---
 enforceVersion: true
-additionalArgs: 
-  - "-PhibernateVersion=$PROJECT_VERSION"
+preBuildScript: |
+  sed -i s/hibernateVersion=.\*/hibernateVersion=$PROJECT_VERSION/ gradle/version.properties
