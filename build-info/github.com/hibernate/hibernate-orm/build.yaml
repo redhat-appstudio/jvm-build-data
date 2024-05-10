@@ -1,4 +1,4 @@
 ---
 enforceVersion: true
 additionalArgs: 
-  -"-PhibernateVersion=$PROJECT_VERSION"
+  - "-PhibernateVersion=$PROJECT_VERSION"
