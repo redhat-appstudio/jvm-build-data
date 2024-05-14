@@ -1,3 +1,4 @@
 ---
 type: "git"
 uri: "https://github.com/eclipse-ee4j/common-annotations-api.git"
+path: "api"
