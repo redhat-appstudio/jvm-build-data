@@ -1,6 +1,9 @@
 ---
 type: "git"
 uri: "https://github.com/eclipse-ee4j/soteria.git"
+tagMapping:
+- pattern: "(\\d+)\\.(\\d+).(\\d+)"
+  tag: "$1.$2.$3-RELEASE"
 legacyRepos:
 - type: "git"
   uri: "https://github.com/javaee/security-soteria.git"
