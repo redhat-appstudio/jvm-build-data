@@ -108,54 +108,64 @@ An example of a complete (although nonsensical) file is shown below:
 
 [source,yaml]
 ----
-enforceVersion: true <1>
-additionalArgs: <2>
+additionalArgs: <1>
   - "-DskipDocs"
-alternativeArgs: <3>
-  - "'set Global / baseVersionSuffix:=\"\"'"
-  - "enableOptimizer"
-preBuildScript: | <4>
-    ./autogen.sh
-    /bin/sh -c "$(rpm --eval %configure); $(rpm --eval %__make) $(rpm --eval %_smp_mflags)"
-additionalDownloads: <5>
-  - uri: https://github.com/mikefarah/yq/releases/download/v4.30.4/yq_linux_amd64 <6>
-    sha256: 30459aa144a26125a1b22c62760f9b3872123233a5658934f7bd9fe714d7864d <7>
-    type: executable <8>
-    fileName: yq <9>
-    binaryPath: only_for_tar/bin <10>
-  - type: rpm <11>
+additionalDownloads: <2>
+  - uri: https://github.com/mikefarah/yq/releases/download/v4.30.4/yq_linux_amd64 <3>
+    sha256: 30459aa144a26125a1b22c62760f9b3872123233a5658934f7bd9fe714d7864d <4>
+    type: executable <5>
+    fileName: yq <6>
+    binaryPath: only_for_tar/bin <7>
+  - type: rpm <8>
     packageName: glibc-devel
-additionalMemory: 4096 <12>
-javaVersion: 11 <13>
-additionalBuilds: <14>
+additionalMemory: 4096 <9>
+additionalBuilds: <10>
   pureJava:
     preBuildScript: |
         ./autogen.sh
         /bin/sh -c "$(rpm --eval %configure); $(rpm --eval %__make) $(rpm --eval %_smp_mflags)"
     additionalArgs:
       - "-Dlz4-pure-java=true"
-toolVersion: 3.8.8 <15>
+allowedDifferences:
+  - \Q-:jbossws-common-4.0.0.Final.jar:class:org/jboss/ws/common/CalendarTest\E <11>
+alternativeArgs: <12>
+  - "'set Global / baseVersionSuffix:=\"\"'"
+  - "enableOptimizer"
+enforceVersion: true <13>
+javaVersion: 11 <14>
+preBuildScript: | <15>
+    ./autogen.sh
+    /bin/sh -c "$(rpm --eval %configure); $(rpm --eval %__make) $(rpm --eval %_smp_mflags)"
 postBuildScript: | <16>
     mvn -DnewVersion=$(params.PROJECT_VERSION) -DgenerateBackupPoms=false -DprocessAllModules=true -f libraries/pom.xml versions:set
+runTests: false <17>
+repositories: <18>
+  - "all"
+  - "jetbrains-kotlinx"
+toolVersion: 3.8.8 <19>
 
 ----
-<1> If the tag contains build files that do not match the version include this to override the version.
-<2> Additional parameters to add to the build command line.
-<3> A complete replacement for the build command line, this should not be used with 'additionalArgs' as it will replace them. This is mostly used in SBT builds.
-<4> A script to run before the build. This can do things like build native components that are required.
-<5> Additional downloads required for the build.
-<6> The URI to download from
-<7> The expected SHA.
-<8> The type, can be either `executable`, or `tar`.
-<9> The final file name, this will be added to `$PATH`. This is only for `executable` files.
-<10> The path to the directory inside the tar file that contains executables, this will be added to `$PATH`.
-<11> Additional RPMs to be installed prior to running the build.
-<12> If the system should allocate additional memory for the build.
-<13> This is used to enforce a particular Java version. See below for available Java versions.
-<14> This is used for additional builds that are alternate to the default. Each name (e.g. `pureJava`) should match to a hash fragment
+<1> Additional parameters to add to the build command line.
+<2> Additional downloads required for the build.
+<3> The URI to download from
+<4> The expected SHA.
+<5> The type, can be either `executable`, or `tar`.
+<6> The final file name, this will be added to `$PATH`. This is only for `executable` files.
+<7> The path to the directory inside the tar file that contains executables, this will be added to `$PATH`.
+<8> Additional RPMs to be installed prior to running the build.
+<9> If the system should allocate additional memory for the build.
+<10> This is used for additional builds that are alternate to the default. Each name (e.g. `pureJava`) should match to a hash fragment
 in `scm.yaml`. Complete recipe information for the build must be included as it is **not** combined with the parent information.
-<15> This is used to override and denote a particular tool version to use.
+<11> Deploy verification exclusion support for known differences to upstream if e.g. upstream jars were corrupted in some known way. This should be a regular expression.
+<12> A complete replacement for the build command line, this should not be used with 'additionalArgs' as it will replace them. This is mostly used in SBT builds.
+<13> If the tag contains build files that do not match the version include this to override the version.
+<14> This is used to enforce a particular Java version. See below for available Java versions.
+<15> A script to run before the build. This can do things like build native components that are required.
 <16> A script to run after the build. Useful if a build requires a secondary tool to run to complete the deployment.
+<17> Whether to run tests (default: false)
+<18> Additional repositories to include in the build named as per those listed https://github.com/redhat-appstudio/jvm-build-data/tree/main/repository-info[here].
+<19> This is used to override and denote a particular tool version to use.
+
 
 ==== Environment Variables
 
