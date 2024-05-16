@@ -1,16 +1,17 @@
 ---
 allowedDifferences:
-- \Q-:narayana-jta-jakarta-5.13.0.Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfGraph\E
-- \Q-:narayana-jta-jakarta-5.13.0.Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfPlugin\E
-- \Q-:narayana-jts-idlj-5.13.0.Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfGraph\E
-- \Q-:narayana-jts-idlj-5.13.0.Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfPlugin\E
-- \Q-:narayana-jts-idlj-5.13.0.Final.jar:class:com/arjuna/ats/jts/services/transactionserver/TransactionServerService\E
-- \Q-:narayana-jts-idlj-jakarta-5.13.0.Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfGraph\E
-- \Q-:narayana-jts-idlj-jakarta-5.13.0.Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfPlugin\E
-- \Q-:narayana-jts-idlj-jakarta-5.13.0.Final.jar:class:com/arjuna/ats/jts/services/transactionserver/TransactionServerService\E
-- \Q-:arjunacore-5.13.0.Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfGraph\E
-- \Q-:arjunacore-5.13.0.Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfPlugin\E
-- \Q-:arjuna-5.13.0.Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfGraph\E
-- \Q-:arjuna-5.13.0.Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfPlugin\E
-- \Q-:narayana-jta-5.13.0.Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfGraph\E
-- \Q-:narayana-jta-5.13.0.Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfPlugin\E
+- -:narayana-jta-jakarta-(.*?).jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfGraph
+- -:narayana-jta-jakarta-(.*?).Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfPlugin
+- -:narayana-jts-idlj-(.*?).Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfGraph
+- -:narayana-jts-idlj-(.*?).Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfPlugin
+- -:narayana-jts-idlj-(.*?).Final.jar:class:com/arjuna/ats/jts/services/transactionserver/TransactionServerService
+- -:narayana-jts-idlj-jakarta-(.*?).Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfGraph
+- -:narayana-jts-idlj-jakarta-(.*?).Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfPlugin
+- -:narayana-jts-idlj-jakarta-(.*?).Final.jar:class:com/arjuna/ats/jts/services/transactionserver/TransactionServerService
+- -:arjunacore-(.*?).Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfGraph
+- -:arjunacore-(.*?).Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfPlugin
+- -:arjuna-(.*?).Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfGraph
+- -:arjuna-(.*?).Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfPlugin
+- -:narayana-jta-(.*?).Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfGraph
+- -:narayana-jta-(.*?).Final.jar:class:com/arjuna/ats/arjuna/tools/stats/TxPerfPlugin
+
