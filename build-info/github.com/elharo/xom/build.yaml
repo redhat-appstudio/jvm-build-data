@@ -1,0 +1,2 @@
+---
+preBuildScript: rm pom.xml
