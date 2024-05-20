@@ -58,3 +58,7 @@
   releaseDate: "2023-09-19"
   minJdkVersion: 21
   maxJdkVersion: 21
+- version: "22"
+  releaseDate: "2024-03-19"
+  minJdkVersion: 22
+  maxJdkVersion: 22
