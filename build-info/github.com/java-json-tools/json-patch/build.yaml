@@ -10,3 +10,4 @@ preBuildScript: |
   sed -i '/.*propdeps.*/d' build.gradle
   [[ -f project.gradle ]] && sed -i -e 's/provided/compileOnly/' project.gradle
   [[ -f build.gradle ]] && sed -i -e 's/provided/compileOnly/' build.gradle
+  [[ ! -f settings.gradle ]] && echo "rootProject.name = 'json-patch'" > settings.gradle
