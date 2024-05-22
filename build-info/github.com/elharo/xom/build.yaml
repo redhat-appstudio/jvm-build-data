@@ -1,6 +1,6 @@
 ---
 additionalArgs:
-- jar
-- maven
+  - jar
+  - maven
 preBuildScript: rm pom.xml
 tool: ant

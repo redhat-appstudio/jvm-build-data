@@ -1,4 +1,4 @@
 ---
 tool: ant
 additionalArgs:
-    - dist
+  - dist

@@ -1,14 +1,14 @@
 ---
 enforceVersion: true
 preBuildScript: |
-    sed -i 's/.*configureVersioning.*//g' build.gradle.kts
-    sed -i 's/^dependencies {$/dependencies {\n    constraints { implementation(group = "org.ajoberstar.grgit", name = "grgit-gradle", version = "4.0.0") }/' buildSrc/build.gradle.kts
-    sed -i -e '125s/^        }$/        }\n\n        repositories {\n            maven {\n                url = uri(System.getProperty("maven.repo.local"))\n            }\n        }/' \
-           -e 's/^import org\.gradle\.api\.publish\.maven\.MavenPublication$/import org.gradle.api.publish.maven.MavenPublication\nimport org.gradle.api.publish.maven.plugins.MavenPublishPlugin/' \
-           -e 's/^    apply<NexusPublishPlugin>/    apply<MavenPublishPlugin>/' \
-           -e '/^    configure<NexusPublishExtension> {$/,/^    }$/d' \
-           -e '/^    afterEvaluate {$/,/^    }$/d' \
-        buildSrc/src/main/kotlin/com/charleskorn/kaml/build/PublishingConfiguration.kt
+  sed -i 's/.*configureVersioning.*//g' build.gradle.kts
+  sed -i 's/^dependencies {$/dependencies {\n    constraints { implementation(group = "org.ajoberstar.grgit", name = "grgit-gradle", version = "4.0.0") }/' buildSrc/build.gradle.kts
+  sed -i -e '125s/^        }$/        }\n\n        repositories {\n            maven {\n                url = uri(System.getProperty("maven.repo.local"))\n            }\n        }/' \
+         -e 's/^import org\.gradle\.api\.publish\.maven\.MavenPublication$/import org.gradle.api.publish.maven.MavenPublication\nimport org.gradle.api.publish.maven.plugins.MavenPublishPlugin/' \
+         -e 's/^    apply<NexusPublishPlugin>/    apply<MavenPublishPlugin>/' \
+         -e '/^    configure<NexusPublishExtension> {$/,/^    }$/d' \
+         -e '/^    afterEvaluate {$/,/^    }$/d' \
+      buildSrc/src/main/kotlin/com/charleskorn/kaml/build/PublishingConfiguration.kt
 additionalArgs:
   - "-x"
   - "signMavenJavaPublication"

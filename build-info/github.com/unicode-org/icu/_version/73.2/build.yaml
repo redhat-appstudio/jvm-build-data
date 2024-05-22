@@ -2,7 +2,7 @@
 additionalArgs:
   - "release"
 preBuildScript: |
-    mkdir -p release
-    sed -e "s|@POMVERSION@|$(params.PROJECT_VERSION)|g;" maven/icu4j/pom.xml > release/icu4j.pom
-    sed -e "s|@POMVERSION@|$(params.PROJECT_VERSION)|g;" maven/icu4j-charset/pom.xml > release/icu4j-charset.pom
-    sed -e "s|@POMVERSION@|$(params.PROJECT_VERSION)|g;" maven/icu4j-localespi/pom.xml > release/icu4j-localespi.pom
+  mkdir -p release
+  sed -e "s|@POMVERSION@|$(params.PROJECT_VERSION)|g;" maven/icu4j/pom.xml > release/icu4j.pom
+  sed -e "s|@POMVERSION@|$(params.PROJECT_VERSION)|g;" maven/icu4j-charset/pom.xml > release/icu4j-charset.pom
+  sed -e "s|@POMVERSION@|$(params.PROJECT_VERSION)|g;" maven/icu4j-localespi/pom.xml > release/icu4j-localespi.pom

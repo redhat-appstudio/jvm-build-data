@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/JodaOrg/joda-time.git"
 tagMapping:
-- pattern: (\d+)\.(\d+)
-  tag: v$1.$2
+  - pattern: (\d+)\.(\d+)
+    tag: v$1.$2

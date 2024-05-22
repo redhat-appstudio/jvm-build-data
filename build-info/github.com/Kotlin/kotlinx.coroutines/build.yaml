@@ -5,6 +5,6 @@ repositories:
   - "all"
   - "jetbrains-kotlinx"
 preBuildScript: |
-    export JDK_16=/lib/jvm/java-1.8.0
+  export JDK_16=/lib/jvm/java-1.8.0
 additionalArgs:
   - "-Pversion=$(PROJECT_VERSION)"

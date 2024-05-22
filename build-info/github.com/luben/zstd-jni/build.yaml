@@ -1,4 +1,4 @@
 ---
 preBuildScript: |
-    sed -i -e '/\/\/ Sonatype/,/\}/d' -e '/\/\/ Android \.aar/,/\/\/ classified Jars$/d' build.sbt
-    sed -i -e 's/com\.github\.joprice/io.github.joprice/;' -e 's/0\.2\.1/0.2.2/;' project/plugins.sbt
+  sed -i -e '/\/\/ Sonatype/,/\}/d' -e '/\/\/ Android \.aar/,/\/\/ classified Jars$/d' build.sbt
+  sed -i -e 's/com\.github\.joprice/io.github.joprice/;' -e 's/0\.2\.1/0.2.2/;' project/plugins.sbt

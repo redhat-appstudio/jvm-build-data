@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/eclipse-ee4j/cdi.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/cdi-spec/cdi.git"
+  - type: "git"
+    uri: "https://github.com/cdi-spec/cdi.git"

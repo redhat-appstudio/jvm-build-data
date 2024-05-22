@@ -4,4 +4,3 @@ uri: "https://github.com/Azure/azure-sdk-for-java.git"
 tagMapping:
   - pattern: (.*)
     tag: azure-core_$1
-

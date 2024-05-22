@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/eclipse-ee4j/soteria.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/javaee/security-soteria.git"
+  - type: "git"
+    uri: "https://github.com/javaee/security-soteria.git"

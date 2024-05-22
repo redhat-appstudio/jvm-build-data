@@ -3,4 +3,4 @@ type: "git"
 uri: "https://github.com/sonatype/oss-parents.git"
 tagMapping:
   - pattern: (.*)
-    tag: spice-parent-$1 
+    tag: spice-parent-$1

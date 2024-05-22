@@ -1,3 +1,4 @@
+---
 - version: "8.4"
   maxJdkVersion: 20
   minJdkVersion: 8

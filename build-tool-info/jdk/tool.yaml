@@ -1,3 +1,4 @@
+---
 - version: "7"
   releaseDate: "2011-07-28"
   minJdkVersion: 7

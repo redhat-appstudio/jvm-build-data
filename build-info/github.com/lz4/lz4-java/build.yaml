@@ -1,6 +1,6 @@
 ---
 preBuildScript: |
-    sed -i -e 's|2\.7\.8|2.5.3|g;' -e 's|-SNAPSHOT|.0|g;' ivy.xml ivy-pure-java.xml
+  sed -i -e 's|2\.7\.8|2.5.3|g;' -e 's|-SNAPSHOT|.0|g;' ivy.xml ivy-pure-java.xml
 additionalDownloads:
   - type: rpm
     packageName: glibc-devel

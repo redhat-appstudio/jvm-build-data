@@ -2,11 +2,11 @@
 additionalMemory: 6144
 javaVersion: "11"
 preBuildScript: |
-    export JDK_16=/lib/jvm/java-1.8.0
-    export JDK_17=/lib/jvm/java-1.8.0
-    export JDK_18=/lib/jvm/java-1.8.0
-    export JDK_9=/lib/jvm/java-11
-    export JBS_DISABLE_CACHE=true
+  export JDK_16=/lib/jvm/java-1.8.0
+  export JDK_17=/lib/jvm/java-1.8.0
+  export JDK_18=/lib/jvm/java-1.8.0
+  export JDK_9=/lib/jvm/java-11
+  export JBS_DISABLE_CACHE=true
 repositories:
   - "all"
   - "intellij-releases"

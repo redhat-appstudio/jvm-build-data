@@ -2,6 +2,6 @@
 type: "git"
 uri: "https://github.com/eclipse-ee4j/jaxb-stax-ex.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/javaee/metro-stax-ex.git"
-  path: "stax-ex"
+  - type: "git"
+    uri: "https://github.com/javaee/metro-stax-ex.git"
+    path: "stax-ex"

@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/JetBrains/java-annotations.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/jvm-build-service-code/JetBrains-java-annotations.git"
+  - type: "git"
+    uri: "https://github.com/jvm-build-service-code/JetBrains-java-annotations.git"

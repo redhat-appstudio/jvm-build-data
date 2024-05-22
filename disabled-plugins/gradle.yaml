@@ -1,3 +1,4 @@
+---
 disabledPlugins:
   - "com.diffplug.gradle.spotless"
   - "kotlin.gradle.targets.js"

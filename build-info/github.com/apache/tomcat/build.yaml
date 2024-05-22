@@ -2,6 +2,6 @@
 additionalArgs:
   - "-Dskip.installer release"
 preBuildScript: |
-    sed -i -e 's|-dev||g;' -e 's|<resolver:install>|<resolver:localrepo dir="artifacts"/>\n    <resolver:install>|;' res/maven/mvn-pub.xml
+  sed -i -e 's|-dev||g;' -e 's|<resolver:install>|<resolver:localrepo dir="artifacts"/>\n    <resolver:install>|;' res/maven/mvn-pub.xml
 postBuildScript: |
-    ant -f res/maven/mvn-pub.xml generic-install
+  ant -f res/maven/mvn-pub.xml generic-install

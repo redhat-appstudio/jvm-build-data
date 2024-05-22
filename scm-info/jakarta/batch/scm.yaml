@@ -2,4 +2,4 @@
 type: "git"
 uri: "https://github.com/jakartaee/batch.git"
 legacyRepos:
-- uri: "https://github.com/jboss/jboss-jakarta-batch-api_spec.git"
+  - uri: "https://github.com/jboss/jboss-jakarta-batch-api_spec.git"

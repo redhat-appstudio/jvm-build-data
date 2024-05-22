@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/FasterXML/jackson-modules-base.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/FasterXML/jackson-module-jaxb-annotations.git"
+  - type: "git"
+    uri: "https://github.com/FasterXML/jackson-module-jaxb-annotations.git"

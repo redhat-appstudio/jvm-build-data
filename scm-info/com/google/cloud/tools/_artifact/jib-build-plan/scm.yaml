@@ -3,5 +3,5 @@ type: "git"
 uri: "https://github.com/GoogleContainerTools/jib"
 path: "jib-build-plan"
 tagMapping:
-- pattern: "(\\d+)\\.(\\d+)\\.(\\d+)"
-  tag: "v$1.$2.$3-build-plan"
+  - pattern: "(\\d+)\\.(\\d+)\\.(\\d+)"
+    tag: "v$1.$2.$3-build-plan"

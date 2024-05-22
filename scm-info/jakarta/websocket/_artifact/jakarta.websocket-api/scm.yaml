@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/jakartaee/websocket.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/jboss/jboss-jakarta-websocket-api.git"
+  - type: "git"
+    uri: "https://github.com/jboss/jboss-jakarta-websocket-api.git"

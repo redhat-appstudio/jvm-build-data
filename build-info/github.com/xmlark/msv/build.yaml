@@ -1,7 +1,7 @@
 ---
 enforceVersion: true
 preBuildScript: |
-    sed -i -e 's/com\.sun\.org\.apache\.xml\.internal\.resolver\.tools/org.apache.xml.resolver.tools/' msv/src/main/java/com/sun/msv/driver/textui/Driver.java
-    sed -i -e 's/1\.4\.3/2.5.4/' pom.xml
-    sed -i -e 's/<groupId>com\.sun\.msv\.datatype\.xsd/<groupId>net.java.dev.msv/' generator/pom.xml msv/pom.xml relames/pom.xml rngconverter/pom.xml xsdlib/pom.xml
-    sed -i -e 's/2010\.1/\${project.version}/' msv/pom.xml
+  sed -i -e 's/com\.sun\.org\.apache\.xml\.internal\.resolver\.tools/org.apache.xml.resolver.tools/' msv/src/main/java/com/sun/msv/driver/textui/Driver.java
+  sed -i -e 's/1\.4\.3/2.5.4/' pom.xml
+  sed -i -e 's/<groupId>com\.sun\.msv\.datatype\.xsd/<groupId>net.java.dev.msv/' generator/pom.xml msv/pom.xml relames/pom.xml rngconverter/pom.xml xsdlib/pom.xml
+  sed -i -e 's/2010\.1/\${project.version}/' msv/pom.xml

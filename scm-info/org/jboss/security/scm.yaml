@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/wildfly-security/jboss-negotiation.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/picketbox/security-xacml.git"
+  - type: "git"
+    uri: "https://github.com/picketbox/security-xacml.git"
