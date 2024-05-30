@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/jboss/uel.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/javaee/el-spec.git"
+  - type: "git"
+    uri: "https://github.com/javaee/el-spec.git"

@@ -1,6 +1,5 @@
 ---
 disableSubmodules: true
-
 repositories:
   - "all"
   - "google"

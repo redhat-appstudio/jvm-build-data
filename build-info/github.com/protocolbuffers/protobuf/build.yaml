@@ -1,7 +1,7 @@
 ---
 preBuildScript: |
-    ./autogen.sh
-    /bin/sh -c "$(rpm --eval %configure); $(rpm --eval %__make) $(rpm --eval %_smp_mflags)"
+  ./autogen.sh
+  /bin/sh -c "$(rpm --eval %configure); $(rpm --eval %__make) $(rpm --eval %_smp_mflags)"
 additionalArgs:
   - "-f"
   - "java/pom.xml"

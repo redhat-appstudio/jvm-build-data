@@ -1,8 +1,9 @@
+---
 disabledPlugins:
   - "org.glassfish.copyright:glassfish-copyright-maven-plugin"
   - "org.sonatype.plugins:nexus-staging-maven-plugin"
   - "com.mycila:license-maven-plugin"
-  - "org.codehaus.mojo:findbugs-maven-plugin" # older version of this will break the build on our version of maven
+  - "org.codehaus.mojo:findbugs-maven-plugin"  # older version of this will break the build on our version of maven
   - "de.jjohannes:gradle-module-metadata-maven-plugin"
   - "org.codehaus.mojo:cobertura-maven-plugin"
   - "com.diffplug.spotless:spotless-maven-plugin"

@@ -2,6 +2,6 @@
 type: "git"
 uri: "https://github.com/eclipse-ee4j/metro-saaj.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/javaee/metro-saaj.git"
-  path: "saaj-ri"
+  - type: "git"
+    uri: "https://github.com/javaee/metro-saaj.git"
+    path: "saaj-ri"

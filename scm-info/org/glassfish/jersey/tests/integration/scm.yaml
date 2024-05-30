@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/eclipse-ee4j/jersey.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/javaee/jersey.git"
+  - type: "git"
+    uri: "https://github.com/javaee/jersey.git"

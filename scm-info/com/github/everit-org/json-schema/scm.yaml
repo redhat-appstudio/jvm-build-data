@@ -1,4 +1,4 @@
 ---
-#this is a fork as this is not the 'official' group id
+# this is a fork as this is not the 'official' group id
 type: "git"
 uri: "https://github.com/jvm-build-service-code/everit-org-json-schema"

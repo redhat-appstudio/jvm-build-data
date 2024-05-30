@@ -2,4 +2,4 @@
 type: "git"
 uri: "https://github.com/apache/ws-wss4j.git"
 legacyRepos:
-- uri: "https://github.com/jboss/ws-wss4j.git"
+  - uri: "https://github.com/jboss/ws-wss4j.git"

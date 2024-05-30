@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/jboss-modules/jboss-modules.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/jbossas/jboss-modules.git"
+  - type: "git"
+    uri: "https://github.com/jbossas/jboss-modules.git"

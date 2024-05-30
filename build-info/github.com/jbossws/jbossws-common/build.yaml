@@ -1,3 +1,3 @@
 ---
 allowedDifferences:
-- \Q-:jbossws-common-4.0.0.Final.jar:class:org/jboss/ws/common/CalendarTest\E
+  - \Q-:jbossws-common-4.0.0.Final.jar:class:org/jboss/ws/common/CalendarTest\E

@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/wildfly/wildfly.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/wildfly-extras/wildfly-microprofile-config.git"
+  - type: "git"
+    uri: "https://github.com/wildfly-extras/wildfly-microprofile-config.git"

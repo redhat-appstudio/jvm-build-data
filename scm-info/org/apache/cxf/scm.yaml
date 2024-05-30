@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/apache/cxf.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/jboss/cxf.git"
+  - type: "git"
+    uri: "https://github.com/jboss/cxf.git"

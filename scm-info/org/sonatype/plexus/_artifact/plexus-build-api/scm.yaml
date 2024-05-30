@@ -3,4 +3,4 @@ type: "git"
 uri: "https://github.com/codehaus-plexus/plexus-build-api.git"
 tagMapping:
   - pattern: (.*)
-    tag: plexus-build-api-$1 
+    tag: plexus-build-api-$1

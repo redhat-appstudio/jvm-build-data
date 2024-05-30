@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://github.com/kiegroup/kogito-runtimes.git"
 legacyRepos:
-- type: "git"
-  uri: "https://github.com/kiegroup/kogito-bom.git"
+  - type: "git"
+    uri: "https://github.com/kiegroup/kogito-bom.git"
