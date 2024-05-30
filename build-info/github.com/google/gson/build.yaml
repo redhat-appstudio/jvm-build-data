@@ -1,5 +1,5 @@
 ---
 javaVersion: "11"
-additionalDownloads:
-  - type: rpm
-    packageName: java-11-openjdk-jmods
+additionalArgs:
+  - "-Dproguard.skip=true"
+tool: maven
