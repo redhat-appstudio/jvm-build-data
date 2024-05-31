@@ -2,3 +2,6 @@
 type: "git"
 uri: "https://github.com/jasypt/jasypt.git"
 path: "/jasypt"
+tagMapping:
+  - pattern: (\d+)\.(\d+).(\d+)
+    tag: jasypt-$1.$2.$3
