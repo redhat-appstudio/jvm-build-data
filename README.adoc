@@ -56,7 +56,7 @@ tagMapping: <3>
 legacyRepos: <6>
   - type: "git"
     uri: "https://github.com/javaee/metro-stax-ex.git"
-    path: "stax-ex" <7>
+path: "stax-ex" <7>
 ----
 <1> The type is optional, Git is the only type supported at present
 <2> The SCM URI that contains the source. If the URI contains a hash fragment (e.g.
