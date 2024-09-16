@@ -1,0 +1,4 @@
+---
+additionalArgs:
+  - "dist"
+tool: ant
