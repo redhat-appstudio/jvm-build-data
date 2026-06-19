@@ -1,3 +1,3 @@
 ---
 type: "git"
-uri: "https://github.com/apache/flink-table-store.git"
+uri: "https://github.com/apache/paimon.git"

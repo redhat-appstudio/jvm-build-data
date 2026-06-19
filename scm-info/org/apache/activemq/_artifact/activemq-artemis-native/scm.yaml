@@ -1,3 +1,3 @@
 ---
 type: "git"
-uri: "https://github.com/apache/activemq-artemis-native.git"
+uri: "https://github.com/apache/artemis-native.git"
