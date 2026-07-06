@@ -1,4 +1,4 @@
 ---
 type: "git"
-uri: "https://github.com/eclipse-ee4j/jsonb-api"
+uri: "https://github.com/jakartaee/jsonb-api"
 path: "/api"

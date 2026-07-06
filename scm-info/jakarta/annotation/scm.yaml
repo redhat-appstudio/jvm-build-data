@@ -1,4 +1,4 @@
 ---
 type: "git"
-uri: "https://github.com/eclipse-ee4j/common-annotations-api.git"
+uri: "https://github.com/jakartaee/common-annotations-api.git"
 path: "api"
